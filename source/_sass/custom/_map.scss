@@ -1,0 +1,294 @@
+.map {
+text-align: center;
+  width: 900px;
+
+  @include breakpoint($desktop) {
+    display: block;
+  }
+  @include breakpoint($mobile-only) {
+    display: none;
+  }
+
+  .background {
+    fill: none;
+    pointer-events: all;
+  }
+
+  .country {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .node {
+    &.fade circle {
+      opacity: .15;
+      transition: opacity 0.5s;
+    }
+
+    circle {
+      opacity: .75;
+      cursor: pointer;
+      transition: opacity 0.5s;
+
+      &.active {
+        opacity: .9;
+        fill: rgb(0, 138, 179) !important;
+        transition: opacity 0.1s;
+      }
+    }
+
+    text {
+      fill: #fff;
+      cursor: pointer;
+    }
+  }
+
+  .region {
+    fill: #ddd;
+    cursor: pointer;
+    transition: fill 0.1s;
+
+    &.active {
+      fill: #bbb;
+      transition: fill 0.1s;
+    }
+
+    &.selected {
+      fill: rgb(193,216,221);
+    }
+  }
+
+}
+
+
+.map-caption {
+  @include breakpoint($desktop) {
+    display: block;
+    width: 100%;
+    text-align: center
+  }
+  @include breakpoint($mobile-only) {
+    display: none;
+  }
+  &.default {
+    color: $gray-20;
+  }
+}
+
+
+.map-alt {
+  display: none;
+
+  @include breakpoint($desktop) {
+    display: none;
+  }
+  @include breakpoint($mobile-only) {
+    display: block;
+  }
+}
+
+
+
+// packmap
+
+.b-pack-map {
+  width: 1200px;
+  margin: 0 auto;
+  .background {
+    fill: none;
+    pointer-events: all;
+  }
+
+  .feature {
+    fill: #ccc;
+    cursor: pointer;
+    &.active {
+      fill: orange;
+    }
+  }
+
+  .country {
+    fill: none;
+    // stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .parent {
+    &.fade circle {
+      opacity: .15;
+      transition: opacity 0.2s;
+    }
+    circle {
+      opacity: .6;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      &.active {
+        opacity: 1;
+        transition: opacity 0.2s;
+      }
+    }
+    &.sector circle {
+      opacity: .5;
+    }
+    text {
+      font-size: 22px;
+    }
+    &.invisible {
+      text {
+        visibility: hidden;
+      }
+      circle {
+        opacity: 0;
+        visibility: visible;
+      }
+      &.sector circle {
+        opacity: .2;
+      }
+    }
+  }
+
+  .node {
+    &.fade circle {
+      opacity: .15;
+      transition: opacity 0.5s;
+    }
+
+    circle {
+      opacity: 1;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      &.active {
+        opacity: 1;
+        transition: opacity 0.2s;
+      }
+    }
+
+    text {
+      font-size: 26px;
+      &.sector-text {
+        font-size: 16px;
+      }
+    }
+    &.study {
+      &.fade circle {
+        opacity: .8;
+        transition: opacity 0.5s;
+        &.active {
+          opacity: 1;
+          transition: opacity 0.2s;
+        }
+      }
+      text {
+        fill: $gray-60;
+        font-size: 16px;
+      }
+      display: none;
+      &.show {
+        // display: initial;
+        display: block;
+      }
+    }
+  }
+
+  .region {
+    fill: #ddd;
+    cursor: pointer;
+    transition: fill 0.2s;
+    &.active {
+      fill: #bbb;
+      transition: fill 0.2s;
+    }
+  }
+
+  text {
+    fill: #fff;
+    cursor: pointer;
+  }
+
+  .parent {
+    opacity: 0;
+    visibility: hidden;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.5s;
+    }
+  }
+
+  .node {
+    opacity: 0;
+    visibility: hidden;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.5s;
+    }
+  }
+}
+
+.pack-ui {
+  .map-ui {
+    text-align: center;
+    .button {
+      color: #fff;
+      background-color: rgba(0, 138, 179, 0.4);
+
+      &.m-active {
+        background-color: rgba(0, 138, 179, 1);
+      }
+    }
+  }
+
+  .tooltip {
+    color: $white;
+    font-size: 16px;
+    border-color: $gray-50;
+    background-color: $gray-50;
+    transition: opacity 0.02s;
+    width: 200px;
+    &::before {
+      border-bottom-color: $gray-50;
+    }
+  }
+
+  .map-caption {
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+}
+
+// safari hack
+#_text_sa, #_text_na, #_text_af, #_text_as, #_text_oc, #_text_eu {
+  font-family: inherit;
+}
+*[id^='_text_'], *[id^='_bubble_']{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+

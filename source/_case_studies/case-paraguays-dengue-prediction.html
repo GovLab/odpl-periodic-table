@@ -1,0 +1,261 @@
+---
+layout: case-study-template
+title: Paraguay’s Dengue Prediction
+image: paraguay-header-1.jpg
+authors: Juliet McMurren, Andrew Young and Stefaan Verhulst
+special_thanks:
+description: Forecasting Outbreaks with Open Data
+impact_type: public
+sub_impact: engagement
+sector: health
+location: Paraguay
+region: sa
+read_time: 5
+full_read_time: 20
+download: case-paraguay.pdf
+case_id:
+case_collection: developing
+case_collection_long: Open Data for Developing Economies Case Studies
+---
+{%contentfor readtime %}
+  {%include readtime.html%}
+{%endcontentfor%}
+
+{% contentfor summary %}
+<p class="text">Dengue Fever has been endemic in Paraguay since 2009. Recognizing that the problem was being compounded by the lack of a strong system for communicating dengue-related dangers to the public, the National Health Surveillance Department of Paraguay opens data related to dengue morbidity. Leveraging this data, researchers created an early warning system that can detect outbreaks of dengue fever a week in advance. The data-driven model can predict dengue outbreaks at the city-level in every city or region in Paraguay—as long as data on morbidity, climate and water are available.</p>
+{% endcontentfor %}
+
+
+{% contentfor background %}
+<div class="">
+  <p class="e-h2">Problem Focus / Country Context</p>
+  <p class="text ParaOverride-2"><img class="_idGenObjectAttribute-1" src="images/resources/maps-paraguay.png" alt="" /></p>
+  <p class="text">Paraguay is a tropical to subtropical country of 6.7 million inhabitants, of whom almost a third live in the capital, Asunción.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-043-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-043">3</a></span></span> Following several decades of rapid economic growth, the 2015 UN Human Development Index classifies it as a country of medium human development,<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-042-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-042">4</a></span></span> and the World Bank now considers it an upper middle income nation.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-041-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-041">5</a></span></span> The percentage of the Paraguayan population living below the poverty line has declined sharply over the last two decades, from 49 percent in 2002 to 22.2 percent in 2015.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-040-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-040">6</a></span></span></p>
+</div>
+<p class="text">While most of Paraguay’s urban population has access to clean drinking water, rural and/or indigenous communities are frequently reliant on surface or rainwater, raising the risk of water- and mosquito-borne disease.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-039-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-039">7</a></span></span> In 2013, the Millennium Development Goals Fund reported that only 6 percent of Paraguay’s indigenous households had access to drinking water, and only 3 percent had adequate sanitation. Furthermore, only 10 percent of Paraguay’s sewage was treated.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-038-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-038">8</a></span></span></p>
+<p class="text">Dengue is a mosquito-borne tropical infection caused by four viruses (DENV-1, DENV-2, DENV-3, and DENV-4) in the Flavivirdae family. These viruses are transmitted by infected female Aedes aegypti and Aedes albopictus mosquitoes that feed diurnally both indoors and outdoors, and breed in settings with standing water (including in puddles, water tanks, containers and old tires), poor sanitation, and a lack of garbage collection. The mosquitoes that transmit dengue are endemic in parts of Central and South America, Africa, Asia, and Oceania, with most cases occurring during the rainy season or warmer months in urban and suburban areas.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-037-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-037">9</a></span></span> Up to 100 million people worldwide contract dengue each year, with 500,000 developing severe illness and 22,000 dying. Some 2.5 billion people live in dengue-endemic areas. Worldwide, cases of dengue have increased thirtyfold since 1960, driven by urbanization, population growth, increased international travel, and climate change.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-036-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-036">10</a></span></span></p>
+<p class="text">Dengue fever is asymptomatic in as many as 50 percent of those infected, while a further minority, particularly among the young and those contracting dengue for the first time, experience an undifferentiated fever only.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-035-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-035">11</a></span></span> Symptoms of dengue, which appear four to seven days after a bite, include a sudden high fever lasting two to seven days; headache and pain behind the eyes; muscle, joint, and bone pain; and skin rash and bruising. Treatment consists of supportive care, and no antiviral treatment is available.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-034-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-034">12</a></span></span> In severe cases, patients may progress to Dengue Hemorrhagic Fever (DHF), with severe abdominal pain, vomiting, diarrhea, convulsions, bruising, and uncontrolled bleeding. Complications can lead to potentially fatal circulatory system failure and shock, also known as Dengue Shock Syndrome (DSS). Dengue infection confers immunity to future infections with the same virus serotype, and a transient immunity to other serotypes. Once that transient immunity passes, however, patients contracting other dengue serotypes are at increased risk of developing DHF.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-033-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-033">13</a></span></span></p>
+<p class="text">Dengue has been declared endemic in Paraguay since 2009.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-032-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-032">14</a></span></span> The Pan American Health Organization reported that there were over 173,000 probable cases of dengue for the year 2016, with 48 cases of severe dengue and 16 deaths.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-031-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-031">15</a></span></span> The Direccion General de Vigilancia de la Salud (DGVS) (National Health Surveillance Department of Paraguay) heads up the country’s prevention and response efforts.</p>
+<p class="e-h2">Open Data in Paraguay</p>
+<p class="text">Paraguay ranked 62nd in the 3rd Open Data Barometer, ahead of Venezuela but behind the majority of Latin American countries, including Argentina (52nd), Peru and Costa Rica (44th), and Colombia (28th). Paraguay’s ranking is largely the result of low scores regarding government policies and government action related to open data.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-030-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-030">16</a></span></span> The Open Knowledge Foundation’s Open Data Index ranked it 50th worldwide in 2015, moving down from its previous ranking of 41 in the 2014 Index. Its open data on procurement tenders and government budget information received high marks, but many other datasets from sectors like the environment and company registers were non-existent or low quality.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-029-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-029">17</a></span></span></p>
+<div class="e-box">
+  <h4 class="e-box__header">Key Actors</h4>
+  <h3 class="e-box__sub-header">Key Data Providers</h3>
+  <p class="">Direccion General de Vigilancia de la Salud (DGVS) (National Health Surveillance Department of Paraguay): DGVS is the agency responsible for the prevention and control of epidemic disease in Paraguay. It collects and publishes data on disease outbreaks and morbidity.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-028-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-028">18</a></span></span></p>
+  <h3 class="e-box__sub-header">Key Data Users and Intermediaries</h3>
+  <p class="">Juan Pane: A researcher at the Facultad Politecnica-Universidad de Asunción with an interest in open data and open government, Juan Pane leads a team seeking to develop data models to provide early warning of dengue outbreaks in Paraguay. He also works for a democracy initiative funded by USAID assisting the Paraguayan government with transparency portals. Paraguayan by birth, Pane completed a doctorate in computer science at the University of Trento, Italy in 2012, followed by a postdoctoral fellowship. He returned to Paraguay with his family in 2013, just as the country was experiencing a dengue epidemic, with 150,000 reported cases and 233 deaths.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-027-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-027">19</a></span></span> Pane reports that the probability of acquiring dengue in some Asunción neighborhoods that year was as high as one in four, a rate that filled him with alarm for his family, but also motivated him to find ways to address the problem of dengue.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-026-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-026">20</a></span></span></p>
+  <p class="text">Iniciativa Latinoamericana por los Datos Abiertos (ILDA): ILDA, a network of NGOs and research organizations focused on Latin America, played a key enabling and funding role for the initiative studied here. ILDA’s “overarching objective” is to “strengthen the accountability and legitimacy of public institutions, improve public services, and fuel economic growth in Latin America and the Caribbean through research and innovation on open data initiatives.”<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-025-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-025">21</a></span></span></p>
+  <h3 class="e-box__sub-header">Key Beneficiaries</h3>
+  <p class="">The direct key beneficiary was DGVS itself, since the data model provided an early warning system of future demands on the healthcare system. Beyond that, Pane intended to help the people of Paraguay: “Dengue doesn’t distinguish between a government minister and my child. Mosquitoes don’t care who they bite. I don’t want anyone to get dengue.”<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-024-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-024">22</a></span></span></p>
+</div>
+
+{% endcontentfor %}
+
+
+{% contentfor description %}
+<div class="">
+  <p class="e-h2">Initiation of the open data activity</p>
+  <p class="text">DGVS collects and publishes incidence and morbidity data on dengue outbreaks in Paraguay. Despite the presence of this data, DGVS lacks an automated predictive tool to enable it to predict dengue outbreaks. In 2013, shortly after returning to Paraguay from his doctoral studies in Italy, researcher Juan Pane and his colleagues at Facultad Politecnica-Universidad de Asunción noted that there was no open source tool available that could be adapted for this purpose by DVGS, nor had any work been done to examine the correlation between incidence of dengue in Paraguay and variables such as climate, cartography, and population.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-023-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-023">23</a></span></span></p>
+</div>
+<p class="text">Pane’s initial hope was to build dynamic maps using the published data to show the origin and spread of outbreaks. He quickly found, however, that the available data would not support this type of granular geo-spatial tracking.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-022-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-022">24</a></span></span> Looking to other dengue-affected countries in Latin America for examples of disease modeling, he found that the few other countries where data was collected, such as Brazil, had similar problems with inadequate granularity and comparability of data, creating major obstacles to longitudinal analysis that could inform predictive modeling. He successfully applied to Iniciativa Latinoamericana por los Datos Abiertos (ILDA), a Latin American open data research, funding and advocacy network, for a research grant to study data modeling of dengue. He and his colleagues then defined the required epidemiological variables and co-variables such as climate, geographic and demographic information, and surveyed 30 dengue-affected countries to assess the availability and format of published dengue data, as well as relevant government agencies responsible for publishing such data.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-021-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-021">25</a></span></span> Pane and his team surveyed the reporting forms used throughout Latin America, identifying 285 variables collected across the 30 countries. Finally, Pane’s team reviewed literature to identify those variables necessary to model dengue incidence.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-020-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-020">26</a></span></span></p>
+<p class="text">Pane’s team then correlated the dengue incidence data with open climatic, geographic, demographic, and sanitation data, and produced a prototype model which was shared with DGVS. The open source web application allowed DGVS to incorporate collected data on a weekly basis and produce early warning maps of predicted dengue incidence for the following week.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-019-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-019">27</a></span></span></p>
+<p class="e-h2">Demand and Supply of Data type(s) and sources</p>
+<p class="text">Pane’s team used existing DGVS data on dengue incidence. The data, which was being collected on forms to report confirmed or probable cases of notifiable diseases to DGVS for subsequent reporting to the World Health Organization, provided information on number of cases, incidence of the four dengue serotypes, and demographics and location of patients. Some of this data was published in PDF format on a weekly basis, but was spread across multiple documents and tables, and did not follow a standard format in each publication. In order to access the raw data, Pane made an agreement with DGVS to supply them with the data model and training in data collection in exchange for granting his team access to the data itself.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-018-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-018">28</a></span></span> This arrangement demonstrates how a clear problem definition and understanding of specific datasets that could help address the problem can enable progress even while government open data efforts lag behind standards and expectations.</p>
+<p class="e-h2">Funding</p>
+<p class="text">As noted, the project was partially funded through a research grant from Iniciativa Latinoamericana por los Datos Abiertos (ILDA). Aside from this funding, however, the project has been conducted entirely by the university research team.</p>
+<p class="e-h2">Open data use</p>
+<p class="text">Data on dengue morbidity that feeds into the prototype application was already opened by DGVS. Additional data accessed by the research and development team was also opened as part of the process of developing the data model. Additionally, all source code used to build the predictive tool is open. As described above, however, much of the data was provided to the researchers in a reciprocal arrangement, rather than broadly opened to the public by the government itself.</p>
+{% endcontentfor %}
+
+
+{% contentfor impact %}
+<p class="text">The dengue prevention tool exists as a prototype and proof of concept on how open data can be used to inform the fight against dengue in Paraguay. As such, the principal success indicator to date is successful prediction of future outbreaks, with a secondary indicator of adoption of the data model by the intended key user, DGVS.</p>
+<p class="e-h3">Accurate Forecasting</p>
+<p class="text">The research and development team’s preliminary results indicated that the open data-driven model was able to predict dengue outbreaks a week ahead with an accuracy of 94.78 percent.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-017-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-017">29</a></span></span> The prototype data model was given to DGVS after the first round of research to enable their uptake of the tool and its continued development. The follow on impacts of providing this type of predictive capacity to the government entity responsible for managing dengue prevention and response remains to be seen. As of early 2017, there is little indication that this new predictive capacity has fundamentally shifted the intervention strategy at DGVS, but with this newly developed and demonstrably accurate tool in their dengue-prevention toolkit, there is significant potential for impact going forward. Any such impact, however, will be largely dependent on DGVS’s responsiveness, especially in the form of a commitment to act on insights generated through the tool; readiness for change and commitment to ensuring sustainability for the effort through consistent resource allocation and data provision.</p>
+<p class="e-h2">Risks</p>
+<p class="text">The potential for privacy harms is likely the central risk of the use of open data to predict dengue outbreaks in Paraguay. As is the case with any data-driven efforts focused on public health concerns, the possibility exists for personally identifiable information to made accessible, open information to be mashed up with other accessible datasets to create new privacy concerns and disease history to inform future decisions (e.g., insurance, housing or hiring) in an unacceptable way.</p>
+<p class="text">Additionally, countries affected by dengue are tropical and subtropical, often with a substantial economic dependence on tourism. As a result, they stand to see their economies suffer as a result of full disclosure of the true incidence of dengue and other mosquito-borne viruses. Many of the data-driven efforts to fight dengue and mosquito-borne illnesses focus on mapping high-risk areas and encouraging additional vigilance.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-016-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-016">30</a></span></span> Although important for minimizing the spread of such diseases, such interventions could lead to a downtick in tourism and greater reluctance to inform this type of openness from government.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-015-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-015">31</a></span></span></p>
+<p class="text">Finally, the initiative is being driven by a small team and championed by a single individual. While this structure helped enable agility in the project development, the project’s large dependence on one individual introduces risks to its longer-term sustainability.</p>
+{% endcontentfor %}
+
+
+{% contentfor lessons %}
+<p class="text">Several important lessons with wider applicability emerge from this particular case study. These can broadly be categorized by considering the key enablers of the project, as well as the most important barriers or challenges to its success.</p>
+<p class="e-h2">Enablers</p>
+<p class="e-h3">Leveraging Existing Relationships</p>
+<p class="text">The research team behind the effort found success not only thanks to data science capabilities, but also the ability of Pane to leverage contacts from his various professional roles as a researcher and transparency consultant to the Paraguayan government to advance the project. For example, Pane’s ability to broker an agreement with DGVS to access their unpublished data, despite their initial concerns about the privacy status of the data, was critical to the tool’s launch; he was only able to reach such an agreement because of his preexisting relationship of trust. Dedicated data champions outside government (the demand side of open data) can play a central role, especially if they are able to leverage pre-existing relationships, networks and associations within government.</p>
+<p class="e-h3">Clear Problem Definition and Understanding of Data Needs</p>
+<p class="text">As described above, important data that feeds into the prototype dengue prediction tool was only made available to the researchers as a result of a reciprocal data-sharing arrangement. While this arrangement would likely not be possible were it not for the existing relationships just discussed, the clear problem definition and granular understanding of the specific datasets that could be brought to bear to help solve the problem also played a key enabling role. Rather than being driven exclusively by the data already available, the university research team developed a clear understanding of the objective of their data use (i.e., a longitudinal understanding of incidences of dengue in Paraguay toward the development of a predictive tool for DGVS), which led to a clear understanding of which datasets needed to be accessed and the development of a strategy to loosen the government’s grip on them.</p>
+<p class="e-h2">Barriers</p>
+<p class="e-h3">Reluctance to Share</p>
+<p class="text">Pane identifies an unwillingness to share data—manifested both as data hugging and exaggerated fears about personal privacy violations—as the single greatest barrier to the project’s success.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-014-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-014">32</a></span></span> Before he built his tool, the data published by DGVS was in static rather than machine readable format, and was of limited usability for automatic data processing.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-013-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-013">33</a></span></span> Better, more complete and more usable data existed, but was being withheld. “The biggest issue is not the technology: it’s convincing people to do transparency based on open data,” says Pane. <span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-012-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-012">34</a></span></span> Pane also adds that the World Health Organization and Pan American Health Organization could play a more pro-active role, arguing that they too sometimes withhold or otherwise restrict the free flow of data.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-011-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-011">35</a></span></span> “We need good data,” he says. “The more people publish the data, the better we all collectively will be.”<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-010-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-010">36</a></span></span></p>
+<p class="e-h3">Other Mosquito-Borne Priorities</p>
+<p class="text">The dengue data model benefitted in part from growing awareness of and concern about not just dengue, but a host of related mosquito-borne illnesses, such as Zika and Chikungunya. On the other hand, the rapid emergence of these multiple illnesses, with often overlapping symptoms, has also created challenges for the t<a id="_idTextAnchor000"></a>eam. For example, Pane reports that DGVS is currently withholding data updates while it struggles to come to terms with the impact of Zika on its dengue data. He adds that the new viruses make identifying and modeling dengue much more complex, in large part because the symptoms being reported that previously indicated probable cases of dengue are the same as those for Zika and Chikungunya.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-009-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-009">37</a></span></span></p>
+{% endcontentfor %}
+
+
+{% contentfor forward %}
+<div class="">
+  <p class="e-h2">Current Status</p>
+  <p class="text">In 2016, Pane’s team released preliminary results and a prototype open source web application that makes use of their data model as proof of concept. In collaboration with another group of researchers, Pane is currently modifying the existing model to enable it to predict the number of dengue cases. The current model merely predicts whether there will be an outbreak or not, but Pane is dissatisfied with the subjective nature of the prediction, since there is no accepted definition of what constitutes an outbreak other than disease incidence beyond what would normally be expected.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-008-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-008">38</a></span></span></p>
+</div>
+<p class="text">Pane notes that the rules of engagement have changed dramatically since the emergence of two new mosquito-borne viruses, Zika and Chikungunya. “The world changed. We don’t have just dengue now,” he says. “Here we have two more diseases that we don’t understand.”<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-007-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-007">39</a></span></span> For example, he says that in the past, if a region had 10 confirmed and 40 probable cases of dengue, it was reasonable to assume that the probable cases were also dengue. That assumption can no longer safely be made. Pane and his team are now trying to determine whether to continue to attempt to model dengue, or to attempt to model the suite of symptoms common to all three viruses.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-006-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-006">40</a></span></span></p>
+<p class="text">At the same time, Pane acknowledges that the crisis of Zika may catalyze change, forcing the Paraguayan government and other affected countries to embrace greater openness in order to contend with the threat the disease poses. “We should use this momentum to boost the conversation about openness, ” he says.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-005-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-005">41</a></span></span></p>
+<p class="e-h2">Sustainability</p>
+<p class="text">The project’s results are preliminary, but the fact that an apparently successful open source model has already been developed suggests that it is sustainable. Future use would depend on the development of an immediately replicable open source model.</p>
+<p class="text">Pane identifies a number of potential risks to the project’s longevity. Like other open data projects, the Paraguay data model is being driven by the passion and conviction of a single individual, and could therefore fall victim to changes in his time and circumstances. Pane also acknowledges the possibility that his model could fail to attract international attention, languishing in obscurity while other researchers attempt to produce similar models. In an attempt to prevent this, he has spoken about the project at several international open data conferences, and all the source codes are open, so that other researchers can benefit from the work already done.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-004-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-004">42</a></span></span></p>
+<p class="e-h2">Replicability</p>
+<p class="text">Although it is not yet ready for immediate adoption elsewhere, Pane’s intent is to produce an open source model that can be readily adapted for use in other countries and with other diseases. Within Paraguay, he hopes to extend its use beyond dengue to include other mosquito-borne viruses such as Zika and Chikungunya.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-003-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-003">43</a></span></span></p>
+<p class="text">Potential barriers to replicability outside Paraguay foreseen by Pane include national data privacy legislation; varying definitions of dengue infection; lack of technical infrastructure and national data collection and management; and political reluctance to jeopardize tourism revenue by exposing the true incidence of dengue. <span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-002-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-002">44</a></span></span></p>
+{% endcontentfor %}
+
+
+{% contentfor conclusion %}
+<p class="text">While it remains a work in progress, Pane and his team have demonstrated that it is possible to use open health data to build a highly accurate early warning system for dengue. Although its continuance has been cast into doubt by the confounding variables of Zika and Chikungunya, Pane remains optimistic that these challenges can be overcome, and that his predictive model could be useful both within Paraguay and abroad.<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-001-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-001">45</a></span></span></p>
+<p class="text">Pane has sometimes been exasperated by the reluctance of Paraguayan authorities to share data with his team of researchers. He emphasizes the need for governments to consider the usefulness of the data they publish—and withhold: “If there’s a message I could send to disease authorities around the world, it is that you are not on your own. There are people around who are smart, who could help you understand what is going on. But for that to happen, you need to publish your data in a way that is actually useful for researchers.”<span class="e-fn-ref _idGenCharOverride-1"><span id="footnote-000-backlink"><a class="_idFootnoteLink _idGenColorInherit" href="Paraguay.html#footnote-000">46</a></span></span></p>
+{% endcontentfor %}
+
+
+{% contentfor footnotes %}
+<!-- <hr class="HorizontalRule-1" /> -->
+<div class="_idFootnotes">
+	<div id="footnote-045" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-045-backlink">1</a>&#9;<span class="CharOverride-2">. </span><span class="CharOverride-3">Project conducted in collaboration with the Web Foundation, United States Agency for International Development (USAID), and the Mobile Solutions, Technical Assistance and Research (mSTAR) program at FHI 360.</span></p>
+	</div>
+	<div id="footnote-044" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-044-backlink">2</a>&#9; Special thanks to Akash Kapur who provided crucial editorial support for this case study, and to the peer reviewers who provided input on a pre-published draft.</p>
+	</div>
+	<div id="footnote-043" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-043-backlink">3</a>&#9;<span class="CharOverride-4">. Wikipedia, “Paraguay,” https://en.wikipedia.org/wiki/Paraguay.</span></p>
+	</div>
+	<div id="footnote-042" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-042-backlink">4</a>&#9;<span class="CharOverride-4">. United Nations Development Program, “Human Development Index,” </span><span class="CharOverride-5">Human Development Reports</span><span class="CharOverride-4">, http://hdr.undp.org/en/content/human-development-index-hdi.</span></p>
+	</div>
+	<div id="footnote-041" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-041-backlink">5</a>&#9;<span class="CharOverride-4">. World Bank, “World Bank Country and Lending Groups,” https://datahelpdesk.worldbank.org/knowledgebase/articles/906519.</span></p>
+	</div>
+	<div id="footnote-040" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-040-backlink">6</a>&#9;<span class="CharOverride-4">. World Bank, “Data: Paraguay,” http://data.worldbank.org/country/paraguay.</span></p>
+	</div>
+	<div id="footnote-039" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-039-backlink">7</a>&#9;<span class="CharOverride-4">. Natalia Ruiz Diaz, “Paraguay: Clean Water Out of Reach for Native Peoples,” </span><span class="CharOverride-5">Inter Press Service</span><span class="CharOverride-4">,June 29, 2010, http://www.ipsnews.net/2010/06/paraguay-clean-water-out-of-reach-for-native-peoples/.</span></p>
+	</div>
+	<div id="footnote-038" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-038-backlink">8</a>&#9;<span class="CharOverride-4">. Millenium Development Fund Achievement Goals, “Paraguay,” http://www.mdgfund.org/country/paraguay.</span></p>
+	</div>
+	<div id="footnote-037" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-037-backlink">9</a>&#9;<span class="CharOverride-4">. International Association for Medical Assistance to Travellers, “Country Health Advice: Paraguay,” https://www.iamat.org/country/paraguay/risk/dengue.</span></p>
+	</div>
+	<div id="footnote-036" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-036-backlink">10</a>&#9;<span class="CharOverride-4">. Wikipedia, “Dengue Fever Outbreaks,” https://en.wikipedia.org/wiki/Dengue_fever_outbreaks</span></p>
+	</div>
+	<div id="footnote-035" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-035-backlink">11</a>&#9;<span class="CharOverride-4">. Centers for Disease Control and Prevention, “Clinical Guidance: Dengue Virus,” Updated September 6, 2014, http://www.cdc.gov/dengue/clinicallab/clinical.html.</span></p>
+	</div>
+	<div id="footnote-034" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-034-backlink">12</a>&#9;<span class="CharOverride-4">. International Association for Medical Assistance to Travellers, “Country Health Advice: Paraguay,” https://www.iamat.org/country/paraguay/risk/dengue.</span></p>
+	</div>
+	<div id="footnote-033" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-033-backlink">13</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-032" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-032-backlink">14</a>&#9;<span class="CharOverride-4">. Juan Pane, Julio Paciello, Verena Ojeda, Natalia Valdez, “Enabling dengue outbreak predictions based on open data,” Open Data Research Symposium Draft Paper, October 5, 2016, </span><a href="https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view"><span class="Hyperlink CharOverride-4">https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view</span></a><span class="CharOverride-4">.</span></p>
+	</div>
+	<div id="footnote-031" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-031-backlink">15</a>&#9;. <span class="CharOverride-6">“Number of Reported Cases of Dengue and Severe Dengue (SD) in the Americas, by Country: Figures for 2016,” Pan American Health Organization, World Health Organization, February 6, 2017,</span> <a href="http://www.paho.org/hq/index.php?option=com_docman&amp;task=doc_download&amp;Itemid=270&amp;gid=37782&amp;lang=en"><span class="Hyperlink CharOverride-6">http://www.paho.org/hq/index.php?option=com_docman&amp;task=doc_download&amp;Itemid=270&amp;gid=37782&amp;lang=en</span></a><span class="CharOverride-6">.</span></p>
+	</div>
+	<div id="footnote-030" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-030-backlink">16</a>&#9;<span class="CharOverride-4">. World Wide Web Foundation, Open Data Barometer, Third Edition, WWWF, April 2016, http://opendatabarometer.org/3rdedition/regional-report/latin-america/.</span></p>
+	</div>
+	<div id="footnote-029" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-029-backlink">17</a>&#9;. <span class="CharOverride-6">“Paraguay,” Global Open Data Index 2015, </span><a href="http://index.okfn.org/place/paraguay/"><span class="Hyperlink CharOverride-6">http://index.okfn.org/place/paraguay/</span></a><span class="CharOverride-6">.</span></p>
+	</div>
+	<div id="footnote-028" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-028-backlink">18</a>&#9;<span class="CharOverride-4">. Juan Pane, Julio Paciello, Verena Ojeda, Natalia Valdez, “Enabling dengue outbreak predictions based on open data,” Open Data Research Symposium Draft Paper, October 5, 2016, </span><a href="https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view"><span class="Hyperlink CharOverride-4">https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view</span></a><span class="CharOverride-4">.</span></p>
+	</div>
+	<div id="footnote-027" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-027-backlink">19</a>&#9;<span class="CharOverride-4">. World Bank, “The Dengue Mosquito Bites and Makes Latin America Sick,” </span><span class="CharOverride-5">World Bank News</span><span class="CharOverride-4">, April 7, 2014, http://www.worldbank.org/en/news/feature/2014/04/07/dengue-en-latinoamerica.</span></p>
+	</div>
+	<div id="footnote-026" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-026-backlink">20</a>&#9;<span class="CharOverride-4">. GovLab interview with Juan Pane, September 9, 2016.</span></p>
+	</div>
+	<div id="footnote-025" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-025-backlink">21</a>&#9; “<span class="CharOverride-6">About ILDA,” Iniciativa Latinoamericana por los Datos Abiertos, </span><a href="http://idatosabiertos.org/about-ilda/"><span class="Hyperlink CharOverride-6">http://idatosabiertos.org/about-ilda/</span></a><span class="CharOverride-6">.</span></p>
+	</div>
+	<div id="footnote-024" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-024-backlink">22</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-023" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-023-backlink">23</a>&#9;<span class="CharOverride-4">. Juan Pane, Julio Paciello, Verena Ojeda, Natalia Valdez, “Enabling dengue outbreak predictions based on open data,” Open Data Research Symposium Draft Paper, October 5, 2016, </span><a href="https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view"><span class="Hyperlink CharOverride-4">https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view</span></a><span class="CharOverride-4">.</span></p>
+	</div>
+	<div id="footnote-022" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-022-backlink">24</a>&#9;<span class="CharOverride-4">. GovLab interview with Juan Pane, September 9, 2016.</span></p>
+	</div>
+	<div id="footnote-021" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-021-backlink">25</a>&#9;<span class="CharOverride-4">. GovLab interview with Juan Pane, September 9, 2016.</span></p>
+	</div>
+	<div id="footnote-020" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-020-backlink">26</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-019" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-019-backlink">27</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-018" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-018-backlink">28</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-017" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-017-backlink">29</a>&#9;<span class="CharOverride-4">. Juan Pane, Julio Paciello, Verena Ojeda, Natalia Valdez, “Enabling dengue outbreak predictions based on open data,” Open Data Research Symposium Draft Paper, October 5, 2016, </span><a href="https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view"><span class="Hyperlink CharOverride-4">https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view</span></a><span class="CharOverride-4">.</span></p>
+	</div>
+	<div id="footnote-016" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-016-backlink">30</a>&#9;<span class="CharOverride-4">. </span><span class="CharOverride-7">Andrew Young, David Sangokoya and Stefaan Verhulst,</span><span class="CharOverride-4"> “Singapore’s Dengue Cluster Map: Open data for public health,” GovLab, http://odimpact.org/case-singapores-dengue-cluster-map.html.</span></p>
+	</div>
+	<div id="footnote-015" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-015-backlink">31</a>&#9;<span class="CharOverride-4">. GovLab interview with Juan Pane, September 9, 2016.</span></p>
+	</div>
+	<div id="footnote-014" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-014-backlink">32</a>&#9;<span class="CharOverride-4">. GovLab interview with Juan Pane, September 9, 2016.</span></p>
+	</div>
+	<div id="footnote-013" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-013-backlink">33</a>&#9;<span class="CharOverride-4">. Juan Pane, Julio Paciello, Verena Ojeda, Natalia Valdez, “Enabling dengue outbreak predictions based on open data,” Open Data Research Symposium Draft Paper, October 5, 2016, </span><a href="https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view"><span class="Hyperlink CharOverride-4">https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view</span></a><span class="CharOverride-4">.</span></p>
+	</div>
+	<div id="footnote-012" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-012-backlink">34</a>&#9;<span class="CharOverride-4">. GovLab interview with Juan Pane, September 9, 2016.</span></p>
+	</div>
+	<div id="footnote-011" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-011-backlink">35</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-010" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-010-backlink">36</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-009" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-009-backlink">37</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-008" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-008-backlink">38</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-007" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-007-backlink">39</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-006" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-006-backlink">40</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-005" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-005-backlink">41</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-004" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-004-backlink">42</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-003" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-003-backlink">43</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+	<div id="footnote-002" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-002-backlink">44</a>&#9;<span class="CharOverride-4">. Juan Pane, Julio Paciello, Verena Ojeda, Natalia Valdez, “Enabling dengue outbreak predictions based on open data,” Open Data Research Symposium Draft Paper, October 5, 2016, </span><a href="https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view"><span class="Hyperlink CharOverride-4">https://drive.google.com/file/d/0B4TpC6ecmrM7Q1lpQ0xoNlJnZlU/view</span></a><span class="CharOverride-4">.</span></p>
+	</div>
+	<div id="footnote-001" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-001-backlink">45</a>&#9;<span class="CharOverride-4">. GovLab interview with Juan Pane, September 9, 2016.</span></p>
+	</div>
+	<div id="footnote-000" class="_idFootnote">
+		<p class="e-footnote-text"><a class="_idFootnoteAnchor _idGenColorInherit" href="Paraguay.html#footnote-000-backlink">46</a>&#9;<span class="CharOverride-4">. Ibid.</span></p>
+	</div>
+</div>
+{% endcontentfor %}

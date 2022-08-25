@@ -1,0 +1,199 @@
+- group: Problem and Demand Definition
+  id: pdd
+  description: "Particularly in developing economies, where resources to put toward data release or data use can be in short supply, a clear, detailed understanding of the problem to be addressed by open data can help to ensure that efforts are targeted and optimized. Some of the most effective open data projects examined here are laser-focused on a specific user group (e.g., smallholder farmers in Colombia or Ghana), or identified gap (e.g., the lack of power quality in the Indian energy sector). Clearly defining the problem can also aid in the development of metrics of success and a strategy for monitoring progress against a well-defined baseline. Many of the initiatives studied as part of this project lacked such a monitoring strategy, making assessments of impact, evidence-driven iteration, and the demonstration of return on investment more challenging."
+  columns:
+    - elements:
+      - symbol: U
+        name: "User Research"
+        description: "Open data initiatives tend to be more successful and avoid the notion of, “if you build it, will they come,” when they are clearly optimized for an intended audience or user base from the start. The upfront identification, mapping and understanding of relevant constituencies, and a similar examination of their needs can enable more targeted open data-driven interventions."
+      - symbol: C
+        name: Causes and Context
+        description: "In many open data initiatives, and in governance innovation efforts more generally, practitioners can find themselves addressing symptoms rather than the root causes of problems. Open data projects, such as the effort to predict dengue outbreaks in Paraguay, tend to be more successful when they seek to address underlying problems (mosquito breeding and transmission) rather than the symptoms of those problems (high levels of dengue fever)."
+      - symbol: Rf
+        name: Refinement
+        description: To move from a well-understood problem area, to a granular, actionable, and quantifiable path forward, successful practitioners often look to refine their understanding of the problem to be addressed by seeking to understand, for instance, why the problem exists in its current form, what contributing factors could be at play, what potential knock-on effects of addressing the problem might be, and why the problem has not yet been solved by some other interested party.
+      - symbol: Bg
+        height: 3
+        name: Benefit and Goals
+        description: >
+          Open data projects often fail to build an audience or continue to evolve and expand successfully over time if they do not successfully define the intended benefits of the open data use and set clear target goals. These deficiencies often can create difficulty in the development of metrics and indicators—important drivers of iteration and impact.
+          Many of the projects studied, including notably Kenya’s GotToVote! project did not have a clear baseline against which to measure the success of the project. Without an understanding of the current baseline, measuring progress toward identified goals and demonstrating whether and how open data efforts actually benefited the public remains a challenge.
+      - symbol: Da
+        height: 3
+        name: Data Audit and Inventory
+        description: Once the problem and value proposition are in place, practitioners are able to explore the availability of datasets, both in the form of open government data, and from other potentially useful and relevant data sources, like NGOs, the private sector, or crowdsourcing efforts. A clear problem definition can help to uncover which data sources could add value and inform strategies for collecting or accessing that data. Colombia’s Aclímate Colombia, for instance, identified the types of data it needed for its agriculture algorithms and engaged the semi-public industry groups that had it. The Prayas Energy Group in India, on the other hand, found that no one collected or stored the type of energy usage information it needed for its power quality monitoring efforts, so it launched its own (open) data collection effort across 18 Indian states.
+
+- group: Capacity and Culture
+  id: cc
+  description: "The lack of available resources, insufficient human capital and immature technological capabilities can create major challenges to achieving meaningful impact with open data projects. These challenges can exist both within a country’s open data ecosystem—that is, the capacity of government, civil society, tech community, and the general public—as well as within the actors on the demand side using open data toward certain objectives and the donor organizations funding them."
+  columns:
+    - elements:
+      - blank: true
+      - symbol: Di
+        height: 3
+        name: Data Infrastructure
+        subcategory: Open Data Ecosystem Elements
+        subcategory_order: 1
+        description: >
+          On the supply side of open data the lack of a strong data infrastructure—that is, hardware and software platforms to make data consistently accessible and machine-readable in a timely manner—often creates major challenges to positive impact.
+          Burundi’s OpenRBF platform is an example of working around issues related to data infrastructure. Burundi provided access to data on its results-based financing efforts around healthcare through the OpenRBF platform, a digital infrastructure for collecting and publishing such data. The existence of an “out-of-the-box” tool for making results-based funding (RBF) data public in reusable formats catalyzed the widespread opening of RBF data across many developing countries in Africa.
+      - symbol: Pu
+        height: 3
+        name: Public Infrastructure
+        subcategory: Open Data Ecosystem Elements
+        subcategory_order: 2
+        description: >
+          Similar to the ICT4D environment, much of the literature and practice<span class="e-fn-ref"><span id="footnote-041-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-041">48</a></span></span> of open data in developing economies points to the importance of a strong public infrastructure—human capital (including data science and statistical knowledge), public services (including education and libraries), and civil society—to ensure that data is collected, cleaned, and released in a usable manner and that updates and feedback are seamlessly incorporated into open datasets. Supply side efforts to leverage these public infrastructures can increase the demand for open data and establish touchpoints with users.
+          An active ecosystem of data users and international open mapping platforms and individuals helped to ensure that Nepal’s open data-driven crisis response efforts could be quickly developed and put into practice. The challenges experienced by Ghana’s Esoko platform as a result of unreliable electricity access in the country, on the other hand, shows the many ways that public infrastructure can affect the success of open data projects.
+      - symbol: Lp
+        height: 3
+        name: Tech Literacy & Internet Penetration
+        subcategory: Open Data Ecosystem Elements
+        subcategory_order: 3
+        description: >
+          Even as access to the Internet continues to expand across the developing world, especially through smartphones and other portable devices, many open data projects are being launched into communities that suffer from low Internet penetration and a persistent digital divide. Several of the initiatives studied struggled to achieve their transformative potential, particularly when practitioners failed to engage intermediaries or civil society groups capable of reaching unconnected audiences.
+          Stakeholders involved in South Africa’s Medicine Price Registry Application (MPRApp) and Tanzania’s open education dashboards pointed to low Internet penetration rates, and the related challenge of low tech literacy, as major barriers they confronted to achieving greater positive impacts.
+      - symbol: Rb
+        height: 3
+        name: Cultural/ Institutional Roadblocks
+        subcategory: Open Data Ecosystem Elements
+        subcategory_order: 4
+        description: >
+          As is often the case in developed countries, too, cultural and institutional roadblocks can limit the impact of open data. These roadblocks can manifest in the form of an institutional culture that remains skeptical of openness, or the absence of well-trained individuals capable of recognizing and acting on the potential of open data (readiness)—beyond the prevalence of engaging volunteers in the development of open data initiatives. In all cases, a more concerted culture- and capacity-building effort is often necessary to create an impact.
+          In Burundi efforts to create transparency and accountability around its results-based financing efforts were slowed and complicated by a lack of readiness for technology-enabled openness. Jamaica’s open data tourism efforts relied on the readiness of outside volunteers to supplement open data through crowdsourcing—with the impact of the project dependent on their capacity to collect data and information in a strategic, usable manner.
+    - elements:
+      - blank: true
+      - blank: true
+      - symbol: Se
+        height: 3
+        name: Skills & Expertise
+        subcategory: Open Data User/Donor Elements
+        subcategory_order: 1
+        description: >
+          Especially for more technical uses of open data—such as sophisticated data analytics—actors on the demand side of open data need to possess certain skills and expertise. Employees at CIAT, the organization behind Aclímate Colombia, for instance, possess high-level data science capabilities that enabled them to leverage open data to create sophisticated algorithmic tools to inform agricultural decision making. Other projects, like crowdsourcing efforts from Jamaica and Nepal, relied on the skills of a few important institutional actors on the demand side and the less-technical efforts of volunteer data collectors.
+      - symbol: Fl
+        name: Feedback Loops
+        subcategory: Open Data User/Donor Elements
+        subcategory_order: 2
+        description: Open data initiatives tend to be less successful when they do not create mechanisms for users and beneficiaries to provide input to demand-side practitioners. Tanzania’s open education dashboards are a notable example. The platforms were launched into an environment with low Internet penetration and digital literacy, with seemingly little opportunity for the intended users and beneficiaries of the tools, like parents or education advocates, to suggest ways to make the platforms more usable (and useful) for the community.
+      - symbol: Rs
+        height: 4
+        name: Resource Availability and Sustainability
+        subcategory: Open Data User/Donor Elements
+        subcategory_order: 3
+        description: >
+          The availability of funding and resources are a key variable of success on both the supply and demand sides of open data. Focusing on the demand side, although many open data projects can be stood up quickly on a tight budget (such as Kenya’s GotToVote! an initial prototype of which was created for only $500), sometimes with a very small team (Paraguay’s dengue prediction efforts were championed by researcher Juan Pane and a small team under his direction), establishing sustainability and scaling use often requires more sustained funding and/or well-defined business models. This was the dynamic at work for example in South Africa, where the MPRApp relied almost entirely on the time and effort of a single person. Likewise, in Uganda, CIPESA, the developers of the iParticipate open health data and citizen engagement effort, struggled to proactively elevate health service delivery concerns to relevant government officials because of funding issues affecting both data collection and outreach efforts.
+          The agriculture information tool Esoko, on the other hand, has managed to take hold in Ghana in large part due to its for-profit, largely business to business (B2B) model, as well as significant investments from foundations and international organizations.
+
+- group: Governance
+  id: gov
+  description: A diversity of governing decisions affect the use and impact of open data efforts. Issues of governance exist at both the ecosystem level—especially related to standards and policies of data release—and on the demand side, with questions of risk mitigation and impact assessment leading the way.
+  columns:
+    - elements:
+      - blank: true
+      - blank: true
+      - blank: true
+      - symbol: M
+        name: Performance Metrics
+        subcategory: Open Data User/Open Agency Elements
+        subcategory_order: 1
+        description: >
+          Open data projects are better positioned for success when practitioners develop and monitor metrics of impact to inform management and iteration.
+          The vast majority of the open data initiatives studied in this series lacked clearly defined performance metrics. Not only does this create major challenges for iterating upon early efforts, it calls the sustainability of these interventions into question, with a demonstration of success and impact a likely requirement for continued funding and investment.
+      - symbol: Rm
+        height: 3
+        name: Risk Mitigation
+        subcategory: Open Data User/Open Agency Elements
+        subcategory_order: 2
+        description: >
+          In some cases, open data projects can be advanced despite some level of risk. In such cases, practitioners must ensure that projects that deal in information that is potentially personally identifiable (including anonymized data) have outlined and implemented a clear, upfront strategy for addressing risks created by open data use.
+          Many of the projects studied in this series dealt in potentially sensitive information—e.g., health, energy consumption, political, and education data. Although each project took steps to ensure that no personally identifiable information was released to the public, all would benefit from a clearly defined—and, preferably, openly available—risk mitigation strategy to ensure that no harms inadvertently fall on data subjects.
+
+    - elements:
+      - blank: true
+      - symbol: Od
+        height: 3
+        name: Open by Default (and other principles)
+        subcategory: Open Data Ecosystem Elements
+        subcategory_order: 1
+        description: >
+          Given the level of government resource allocation and time investment required to implement strong open data initiatives, high-level political buy-in and codified open data policies (reflecting the International Open Data Charter principles) are needed to provide the incentives and flexibility to government officials to meaningfully advance open data goals.
+          The ESMI effort in India, for example, is an industry- and NGO-driven effort to create and open useful data on power quality in the country. This effort, which has had relatively little discernible impact to date, is only necessary because of the lack of energy data being opened by government—an issue that could be resolved with a commitment to openness by default and other internationally accepted principles.
+      - symbol: Fi
+        height: 3
+        name: Freedom of Information and other Policies
+        subcategory: Open Data Ecosystem Elements
+        subcategory_order: 2
+        description: >
+          Clear policies pushing forward access to information and data can act as important drivers for open data initiatives. Without explicit policy backing, the sustainability of open data efforts can be called into question, and access to necessary data can dry up at any time. The existence of Freedom of Information policies can also provide means for accessing relevant information, though often at a much slower pace than open data.
+          A key enabler for the MPRApp open data initiative, for example, was South Africa’s legislative framework that promotes and enacts transparency in medicine pricing. Such a framework compels the Department of Health to collect and publish data on medicine prices in South Africa, ensuring that the supply side of the MPRApp will continue to be made accessible, allowing Code for South Africa to focus on improving the tool and getting it into the hands of its intended users.
+      - symbol: Dq
+        height: 4
+        name: Data Quality
+        subcategory: Open Data Ecosystem Elements
+        subcategory_order: 3
+        description: >
+          A widely prevalent challenge to positive impact arises from poor data quality. Data quality is an issue in developed countries, but often presents even greater barriers to success in developing countries. Quality issues can manifest in a number of ways, like inaccurate information, a lack of completeness in official datasets, out-of-date data, or otherwise corrupted datasets.
+          Aclímate Colombia, for example, experienced challenges gaining access to the most complete and up-to-date information sets for its agriculture tools, slowing their development. Open Development Cambodia’s efforts are consistently challenged by not only strong restrictions in terms redistribution, reproduction, and reuse on some datasets, but also by the inconsistency and unpredictability of when updates to important official datasets occur.
+          In South Africa, the MPRApp was hurt by a lack of interoperability; that is, open data was not made available in standards that allowed for aggregation and manipulation. Likewise, Kenya’s GotToVote! experienced major challenges when one of its central data sources crashed unexpectedly, rendering the platform temporarily unusable.
+      - symbol: R
+        height: 4
+        name: Responsiveness
+        subcategory: Open Data Ecosystem Elements
+        subcategory_order: 4
+        description: >
+          Just as open data is unlikely to create a major impact without demand-side actors to act upon released data, a lack of responsiveness, often characterized by a lack of commitment to take up data-driven insights within governing institutions, can limit the impact of open data. Often, governments succumb to the temptation to open wash data, nominally opening it up but failing to create feedback loops to ensure that users are actually using the data or that data is being released to meet a genuine demand.
+          In Jamaica, for example, an interactive community mapping project is supplementing open datasets with a crowdsourced effort to improve tourism in the country; the project’s clear potential has not yielded major impacts yet in part because tourism authorities have not yet acted on the generated insights. The researchers who used open data to predict dengue fever transmission in Paraguay also experienced ongoing challenges wresting the most useful data for their algorithms from government data holders; there has been little indication that their insights will be meaningfully taken up by institutional authorities.
+
+- group: Partnerships
+  id: parts
+  description: In many high-impact open data projects, partnerships within and especially across sectors play a key role in enabling success. Whether creating touchpoints with citizens through partnerships with civil society, informing the public through media partnerships, or filling important data gaps through partnerships with private sector entities, open data suppliers and users often improve outcomes through collaboration.
+  columns:
+    - elements:
+      - blank: true
+      - symbol: Dh
+        height: 3
+        name: Data Holders
+        description: >
+          Although open data is meant to provide value to data users without any direct engagement with data holders necessary, partnering with entities on the supply side (including government) can help to fill data gaps and enable higher impact data use.
+          Aclímate Colombia is a strong example of the potential of such partnerships. The initiative, aimed at providing farmers with a better ability to plant crops in a way that is resilient to the effects of climate change, would not be possible without collaboration between the driver of the initiative (a civil society organization), key data holders (government ministries and agencies), and a second group of key data holders (private and semi-private crop growers’ associations). GotToVote! in Kenya, on the other hand, did not establish such cross-sector partnerships, and its long-term sustainability is now in question.
+      - symbol: I
+        height: 4
+        name: Intermediaries
+        description: >
+          In many developing economies, as mentioned above, Internet penetration and, especially, data literacy are low among the citizenry. The presence of intermediaries—including journalists and others with relevant skills—can help to determine whether or not the available open data-driven outputs reach a community of users, and the intended impact is achieved<span class="e-fn-ref"><span id="footnote-040-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-040">49</a></span></span>. The continued advancement of open data intermediaries can be seen as a key area of capacity building in developing economies.
+          To encourage the use of Code for South Africa’s MPRApp, doctors and pharmacists played an important intermediation role with citizens. These trusted advisors—with nothing to gain from helping patients spend less money on their prescriptions—helped to alert citizens to the database and the potential for identifying much cheaper generic drugs to treat their ailments.
+          In addition, the open data-driven offerings of Open Development Cambodia are often presented on the initiative’s website in a comprehensible manner (similar to data-driven Wikipedia articles on topics of public concern, like forest cover or development aid spending), but reach a much wider audience when taken up by journalists in the country and abroad in reporting on conditions in the country.
+          Both of Tanzania’s open education dashboards, on the other hand, failed to attract a regular user base, likely as a result of a failure to engage consistently with intermediaries that could make the sites’ offerings useful to an intended audience with low digital literacy and access.
+      - symbol: De
+        height: 3
+        name: Domain Experts
+        description: In many cases, demand-side open data actors’ expertise lies in technology or data science rather than the problem areas they seek to address through the use of open data. Tapping into the knowledge of stakeholders with relevant sector-specific expertise can improve efforts to optimize and target open data efforts based on a true understanding of needs, opportunities, and barriers. Nepali NGOs and businesses using open government data and crowdsourced data during the response to a major earthquake in the country, for instance, engaged with on-the-ground experts in crisis response who came to Nepal from around the world to help target its offerings.
+      - symbol: Co
+        name: Collaborators
+        description: Open data practitioners can extend their capacity by collaborating with like-minded organizations, institutions, or individuals, including foreign actors. Ghana’s Esoko agricultural information service, for example, is part of the Global Open Data for Agriculture and Nutrition (GODAN) network, enabling the company to tap into the knowledge of similar organizations from around the world seeking to leverage open agriculture data for business development and/or public benefit.
+
+- group: Risks
+  id: risks
+  description: The release and use of open data in developing economies are not without risks. An upfront mapping and consideration of risks associated with intended uses of open data can allow practitioners to design programs from the outset in a way that is well-positioned to overcome or mitigate those risks. The risks listed here, however, should not be considered arguments against using open data in development. Rather, they are reasons for taking a more fine-grained approach that pays close attention to the empirical evidence, sifting out what works and what does not, and identifying conditions for scaling and replication.
+  columns:
+    - elements:
+      - symbol: Pr
+        height: 3
+        name: Privacy Concerns
+        description: Privacy concerns probably rank among the most commonly cited worries over opening up data. Especially in conflict-stricken regions, individuals’ anonymity can be of life-or-death importance. Potential privacy harms can arise even from the release of ostensibly anonymized personally identifiable information (PII)<span class="e-fn-ref"><span id="footnote-039-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-039">50</a></span></span>. Although the vast majority of open data efforts seek to anonymize or otherwise limit the release of PII, it is important to recognize that a lack of sophistication in anonymization or aggregation efforts can result in the inadvertent release of sensitive information<span class="e-fn-ref"><span id="footnote-038-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-038">51</a></span></span>. In addition, in some instances information that itself poses no privacy concerns can be combined with other openly available datasets; the aggregated and linked information can lead to unexpected disclosure of personal data, such as bringing together open data on political activities with separately accessible information on a person’s location or place of work, for example<span class="e-fn-ref"><span id="footnote-037-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-037">52</a></span></span>.
+      - symbol: Ds
+        height: 3
+        name: Data Security
+        description: Because much government data contains sensitive information regarding individuals, industries, and national security, opening that data often leads to quite reasonable questions about data security. Cybersecurity remains a challenge across the world, and perhaps especially so in developing countries, which may lack the technical expertise to adequately protect information from sophisticated hackers and other intrusions<span class="e-fn-ref"><span id="footnote-036-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-036">53</a></span></span>. At the same time, though security concerns are very real and important, they must be balanced against the opportunity cost or risk of not sharing data; often, government decision makers can lean on tenuous security concerns to justify keeping data closed and restricting access, potentially limiting the solution space.
+      - symbol: Dm
+        height: 3
+        name: Poor decision-making due to faulty information
+        description: 'Whether related to humanitarian efforts, crisis relief, or the livelihoods of vulnerable populations, data-driven efforts in developing economies can be literally life-or-death affairs. Given the many challenges and obstacles involved in open data projects, it is important to recognize the risks inherent in basing such life-and-death decisions on information that could be incomplete, out-of-date or otherwise faulty. The broader point is this: insights generated from data are only as good—and their impacts only as positive—as the quality of the underlying data<span class="e-fn-ref"><span id="footnote-035-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-035">54</a></span></span>.'
+      - symbol: Pa
+        name: Entrenching power asymmetries
+        description: Although data can be empowering, it can also consolidate or reinforce existing privileges and authority inherent in societies. This problem is closely linked (though not restricted) to digital divide challenges; when only the elite of a society have access to data and/or data science capabilities, releasing data is likely to disproportionally benefit that elite<span class="e-fn-ref"><span id="footnote-034-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-034">55</a></span></span>. We found numerous examples<span class="e-fn-ref"><span id="footnote-033-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-033">56</a></span></span>, and they are important reminders that open data projects need to work hard to ensure that their social and economic benefits are widely, and evenly, distributed.
+      - symbol: Ow
+        height: 3
+        name: Open washing
+        description: The term “open washing” has taken hold in practitioner circles over recent years describing the risk that governments may seek to leverage the enthusiasm for open data to avoid more difficult and potentially transformative openness and transparency efforts<span class="e-fn-ref"><span id="footnote-032-backlink"><a class="_idFootnoteLink" href="odimpact-final-report.html#footnote-032">57</a></span></span>. The Extractives Industries Transparency Initiative, for instance, is a laudable effort to push for more energy-related openness around the world, which has had demonstrable impacts on accountability. There is a growing belief, however, that a subset of still largely closed governments is joining the initiative only “in order to increase their international reputation and bolster their access to foreign aid.”

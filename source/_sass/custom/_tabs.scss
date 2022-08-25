@@ -1,0 +1,82 @@
+// Tabs
+// Custom styling for Foundation tabs
+// http://foundation.zurb.com/sites/docs/tabs.html
+.tabs {
+  padding-left: 0;
+  display: inline-block;
+  position: relative;
+  border: 0;
+  margin: 10px;
+  list-style-type: none;
+  background: transparent;
+  border: 1px solid #fff;
+  &:before {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    content: ' ';
+    display: table;
+    clear: both;
+  }
+  &>.tabs-title {
+    background-color: $gray-30;
+    margin: 0 10px;
+    float: left;
+    &>a {
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
+      padding: 10px 20px;
+      line-height: 1;
+      color: #fff;
+      &:hover {
+        color: $white;
+        background: #999;
+        &:focus {
+          background: #164A7A;
+        }
+      }
+    }
+    &>a[aria-selected='true'] {
+      background: #164A7A;
+    }
+  }
+  .e-side-link {
+    padding: 17px 0;
+    position: absolute;
+    right: 25px;
+  }
+}
+.tabs-content {
+  .tabs-panel {
+    display: none;
+    padding: 1rem;
+
+    &.is-active {
+      display: block;
+    }
+    .row {
+      .columns {
+        text-align: center;
+      }
+    }
+  }
+  .button {
+    background-color: transparent;
+    font-size: 15px;
+    text-transform: none;
+    width: 100%;
+    &:hover {
+      background-color: $gray-10;
+    }
+    &:focus {
+      outline: none;
+    }
+    &.selected {
+      background-color: $gray-05;
+    }
+  }
+}

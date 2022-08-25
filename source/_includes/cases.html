@@ -1,0 +1,25 @@
+{%assign case_studies = site.case_studies %}
+
+<div class="page-section m-no-top-padding" id="results">
+  <div class="row grid align-center">
+    {% for case in case_studies %}
+    <div class="e-card impact-{{case.impact_type}} sub-impact-{{case.sub_impact}} sector-{{case.sector}} region-{{case.region}} collection-{{case.case_collection}} {% if case.unreleased %} m-unreleased {% endif %}">
+      {% if case.unreleased %}
+      <div class="e-card-inner">
+        <div class="e-case-image" style="background-image: url({{'/images/banners/thumbs/' | append: case.image | absolute_url}})"></div>
+        <p class="e-case-name">{{case.title | truncate: 60}}</p>
+        <p class="e-case-description">{{case.description | truncate:200}}</p>
+      </div>
+      {% else %}
+      <a href="case-{{case.title | slugify | replace: '-s-', 's-'}}.html">
+        <div class="e-card-inner">
+          <div class="e-case-image" style="background-image: url({{'/images/banners/thumbs/' | append: case.image | absolute_url}})"></div>
+          <p class="e-case-name">{{case.title | truncate:60}}</p>
+          <p class="e-case-description">{{case.description | truncate:200}}</p>
+        </div>
+      </a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

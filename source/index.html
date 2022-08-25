@@ -1,0 +1,118 @@
+---
+layout: default
+title: Periodic Table of Open Data’s Impact Factors
+custom_scripts: periodic-table.js
+---
+
+<main role="main" id="periodic-table-page">
+
+  <header class="top-section">
+    <div class="wrap">
+      <h2>Periodic Table of Open Data’s Impact Factors</h2>
+    </div>
+    <!-- SOCIAL MEDIA ICONS -->
+  </header>
+
+    <div class="row show-for-large sm-icons">
+      <ul class="b-sidebar b-sidebar-wide">
+        <a href="#" id="facebook"><li class="facebook"><i class="fa fa-facebook"></i></li></a><a href="#" id="linkedin"><li class="linkedin"><i class="fa fa-linkedin"></i></li></a>
+        <a href="#" id="twitter"><li class="twitter"><i class="fa fa-twitter"></i></li></a>
+        <a href="#" id="email" message="mailto:?subject={{ page.title | url_escape }}&body={{'%0A%0ARead More%0A%0A' | url_escape}}"><li class="email"><i class="fa fa-envelope"></i></li></a>
+      </ul>
+    </div>
+
+  <div class="page-section">
+    <div class="row align-center">
+      <div class="small-12 column">
+        <p>Based on the <a href="{{'/files/odimpact-developing-economies-appendices.pdf' | absolute_url}}" target="_blank" class="file-odimpact-developing-economies-appendices">existing literature</a> and <a href="{{'/index.html#explore' | absolute_url}}" target="_blank">case studies,</a> we have developed a Periodic Table of Open Data Elements detailing the enabling conditions and disabling factors that often determine the impact of open data initiatives. Although the importance of local variation and context is, of course, paramount, current research and practice shows that the elements included in five central issue categories — Problem and Demand Definition, Capacity and Culture, Partnerships, Risks, Governance — are likely to either enable or disrupt the success of open data projects when replicated across countries.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-section">
+    <div class="row align-center">
+      <div class="large-12 column periodic-table-alt">
+        <img src="{{'/images/final-report/table.png' | absolute_url}}">
+        <p class='caption'>Increase your window size to enable interactive table</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="periodic-table">
+    {% for i in site.data.elements %}
+      <div class="periodic-table__group periodic-table__group--{{i.id}}">
+        <p class="group-name">{{i.group}}</p>
+        <div class="periodic-table__element-container">
+        {% for j in i.columns %}
+        <div class="periodic-table__column">
+            {% for k in j.elements %}
+              {% if k.blank %}
+              <div class="periodic-table__element element element--blank"></div>
+              {% else %}
+              <div id="{{k.symbol | slugify}}" class="periodic-table__element element element--{{i.id}} element--height-{{k.height}} ">
+                <div class="element__container js-click">
+                  <h2>{{k.symbol}}</h2>
+                  <p>{{k.name}}</p>
+                </div>
+                <div class="element__description js-unclick">
+                  <h3>{{k.symbol}}</h3>
+                  <h4>{{k.name}}</h4>
+                  <p>{{k.description}}</p>
+                  <span class="element__description--subcategory">{{k.subcategory}}</span>
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="periodic-tabs" id="details">
+    {% for i in site.data.elements %}
+    <div class="periodic-tab periodic-tab--{{i.id}} js-toggle">
+      <header>
+        <h3>{{i.group}}</h3>
+        <p>{{i.description}}</p>
+      </header>
+      <section>
+        {% assign first = false %}
+        {% for j in i.columns %}
+          {% for k in j.elements %}
+            {% if k.blank %}{% else %}
+            {% if k.subcategory_order == 1 %}
+              {% if first == true %}
+                {% assign first = false %}
+              {% else %}
+                {% assign first = true %}
+              {% endif %}
+              <h5 class="{% unless first %}second-subcategory{% endunless %}">{{k.subcategory}}</h5>
+            {% endif %}
+            <div class="periodic-tab__element">
+              <div class="{% unless first %}second-subcategory{% endunless %}">
+                <h3>{{k.symbol}}</h3>
+                <h4>{{k.name}}</h4>
+              </div>
+              <p>{{k.description}}</p>
+            </div>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </section>
+    </div>
+    {% endfor %}
+  </div>
+  {% include final-report-footnotes.html %}
+</main>
+
+{% contentfor custom_scripts %}
+<script src="{{ '/js/periodic-table.js' | absolute_url }}"></script>
+
+<script type="text/javascript">
+  $(".file-odimpact-developing-economies-appendices").on('click', function() {
+    ga('send', 'event', 'File', 'download', 'ODImpact - Appendices');
+  });
+</script>
+{% endcontentfor %}

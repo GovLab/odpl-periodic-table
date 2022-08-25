@@ -1,0 +1,64 @@
+ul.b-sidebar {
+    position: absolute;
+    right: 0;
+    list-style: none;
+    text-align: center;
+    @media (max-width: 1068px) {
+        opacity: 0;
+    }
+    &-wide {
+        @media (min-width: 1025px) {
+            opacity: 1 !important;
+        }
+        @media (max-width: 1025px) {
+            opacity: 0 !important;
+        }
+        li {
+            @media (max-width: 1140px) {
+                margin-right: 30px !important;
+            }
+            @media (max-width: 1085px) {
+                margin-right: 0 !important;
+            }
+        }
+    }
+
+    li {
+        padding: 10px;
+        color: $white;
+        width: 45px;
+        height: 45px;
+        &.facebook {
+            background-color: $facebook-blue;
+        }
+        &.linkedin {
+            background-color: $linkedin-blue;
+        }
+        &.google-plus {
+            background-color: $google-plus-red;
+        }
+        &.twitter {
+            background-color: $twitter-blue;
+        }
+        &.email {
+            background-color: $gray-20-solid;
+        }
+        @include breakpoint($desktop) {
+            display: block;
+        }
+        i {
+        }
+    }
+    @include breakpoint($desktop) {
+        margin-right: 30px;
+    }
+    @media (max-width: 1140px) {
+        margin-right: 0;
+    }
+
+    &.js-scroll-fixed {
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+}

@@ -1,0 +1,130 @@
+---
+---
+
+$od-blue: #164A7A;
+$main-color: $od-blue;
+$purple: purple;
+$cool-gray: #ced5e3;
+$dark-blue-2: #103456;
+$fuschia: #AD0054;
+$fuschia-20k: #80003e;
+
+// Breakpoints
+$small-only: screen and (max-width: 39.9375em);
+$touch: screen and (max-width: 64em);
+$medium: screen and (min-width: 40em);
+$medium-only: screen and (min-width: 40em) and (max-width: 63.9375em);
+$large: screen and (min-width: 64em);
+$custom: screen and (min-width: 1111px) and (max-width: 1168px);
+
+@import "custom/variables";
+@import 'breakpoint';
+@import "custom/page-section";
+@import 'custom/page-top-section';
+@import 'case-study-header';
+@import 'case-study-body';
+@import 'footnotes';
+@import 'about';
+@import 'claudio-custom-components';
+@import 'claudio-custom';
+@import 'resources';
+@import 'homepage';
+@import 'explore';
+@import 'tables';
+@import 'final-report';
+@import 'periodic-table';
+@import 'sandbox';
+@import 'contributors';
+
+/* import site specific rules */
+
+// @import 'custom/variables';
+// @import 'custom/base';
+// @import 'custom/typography';
+@import 'custom/topnav';
+@import 'custom/projects-list';
+@import 'custom/page-section';
+// @import 'custom/page-top-section';
+// @import 'custom/button';
+@import 'custom/footer';
+@import 'custom/tabs'; //updated
+// @import 'custom/footer';
+@import 'custom/slide';
+@import 'custom/sidebar';
+@import 'custom/divider';
+@import 'custom/sticky';
+@import 'custom/card';  //updated
+// @import 'custom/aux';
+@import 'custom/map'; //updated
+@import 'custom/accordion';
+@import 'custom/scrollspy';
+@import 'custom/copyright';
+
+
+/* General Styleguide customizations */
+
+// Page Sections
+.page-section {
+  &--blue { background-color: $blue; }
+  &--orange { background-color: $orange; }
+  &--yellow { background-color: $yellow; color: $white; }
+  &--fuschia { background-color: $fuschia; color: $white; }
+  &--no-padding {
+    padding: 0;
+    &.columns {padding: 0;}
+  }
+  .columns {
+    &--dark-blue {
+      background-color: $dark-blue;}
+    &--dark-blue-2 {
+      background-color: $dark-blue-2;}
+    &--padded { padding: 75px 50px; }
+    &--spaced { margin-bottom: 50px; }
+    &--small-lighten {
+      @include breakpoint($small-only) {
+        background-color: $dark-blue;
+      }
+      @include breakpoint($medium-only) {
+        background-color: $dark-blue;
+      }
+    }
+    &--small-darken {
+      @include breakpoint($small-only) {
+        background-color: $dark-blue-2;
+      }
+      @include breakpoint($medium-only) {
+        background-color: $dark-blue-2;
+      }
+    }
+  }
+}
+
+// Buttons
+.button {
+  &--dark-blue {
+    background-color: $od-blue;
+    &:hover { background-color: $dark-blue-2; }
+  }
+}
+
+// temp hack/replace wih crossbrowser styles
+html.temp-browser-is-safari .temp-hide-for-safari {
+  display: none;
+}
+
+.u-material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  /* Support for IE. */ font-feature-settings: 'liga';
+}

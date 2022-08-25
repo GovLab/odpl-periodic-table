@@ -1,0 +1,58 @@
+.e-h1 {
+    color: $gray-50;
+    text-transform: uppercase;
+    font-weight: 400 !important;
+    font-size: 22px !important;
+}
+
+.scrollspy-container {
+  @include breakpoint($small-only) {
+    display: none;
+  }
+  @include breakpoint($touch) {
+    display: none;
+  }
+}
+
+.e-scrollspy {
+    text-align: right;
+    padding-top: 30px;
+    display: block;
+
+    li {
+        color: $gray-30;
+        text-align: right;
+        font-weight: 400;
+        font-size: 12px;
+        text-transform: uppercase;
+        list-style: none;
+
+        &.active {
+            color: $gray-50;
+            font-size: 14px;
+            padding: 11px 0;
+            font-weight: 600;
+        }
+    }
+
+    &.m-active {
+      position: fixed;
+      max-width: 22.5%;
+    }
+
+    &.m-absolute {
+        position: absolute;
+        max-width: 22.5%;
+    }
+
+}
+
+.fixed {
+    position: fixed;
+}
+
+.long-reading {
+    section {
+        padding-bottom: 5%;
+    }
+}

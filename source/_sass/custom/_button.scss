@@ -1,0 +1,146 @@
+.b-button {
+
+    i.m-space {
+        line-height: 1.5;
+    }
+
+    &.m-panel {
+        display: block;
+        width: 100%;
+        height: 100%;
+        i {
+            &.m-lg {
+                font-size: 50px;
+            }
+            &.m-xl {
+                font-size: 100px;
+            }
+        }
+    }
+
+    &.m-transparent {
+        background-color: transparent;
+        &:hover {
+            background-color: $white-30;
+            @include transition;
+        }
+    }
+
+    &.m-negative {
+        color: $white;
+    }
+
+    &.m-box {
+        max-width: 150px;
+        border: solid 1px $white;
+    }
+
+    &.m-bottom-overlap {
+        display: block;
+        position: absolute;
+        bottom: -25px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 280px;
+        &.m-detail-page {
+            padding-right: 40px;
+            padding-left: 40px;
+            width: 350px;
+            i {
+                line-height: 1;
+            }
+        }
+    }
+
+    &.m-dark-blue {
+        background-color: $dark-blue;
+        &:hover {
+            background-color: $dark-blue-2;
+        }
+        &:focus {
+            color: $white;
+        }
+    }
+
+    &.m-orange {
+        background-color: $orange;
+        &:hover {
+            background-color: $orange-20k;
+        }
+        &:focus {
+            color: $white;
+        }
+    }
+
+    &.m-blue {
+        background-color: $blue;
+        &:hover {
+            background-color: $blue-20k;
+        }
+        &:focus {
+            color: $white;
+        }
+    }
+
+    &.m-yellow {
+        background-color: $yellow;
+        &:hover {
+            background-color: $yellow-20k;
+        }
+        &:focus {
+            color: $white;
+        }
+    }
+
+    &.m-fuschia {
+        background-color: $fuschia;
+        &:hover {
+            background-color: $fuschia-20k;
+        }
+        &:focus {
+            color: $white;
+        }
+    }
+
+    &.m-wide-padding {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+}
+
+
+.b-lower-top-buttons {
+    position: relative;
+
+    .b-button {
+        width: 150px;
+        height: 120px;
+        position: absolute;
+        top: -100px;
+        &.m-right {
+            right: 50px;
+        }
+        &.m-left {
+            left: 50px;
+        }
+
+        &.m-more-info {
+            .e-more {
+                opacity: 0;
+                @include transition;
+            }
+            &:hover {
+                background-color: transparent;
+                & .e-more {
+                    opacity: 1;
+                    @include transition;
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,413 @@
+{% extends "_base.html" %}
+{% block page_id %}case-study-page{% endblock %}
+
+{% block content %}
+
+
+<main class="case-study-page" role="main">
+
+    <div class="b-top-section" style="background-image: url(./static/img/banners/sm/{{case.image}})">
+        <div class="e-shade"></div>
+        <hgroup class="e-titles">
+            <h1 class="e-main-title">{{case.title}}</h1>
+            <h2 class="e-tagline">{{case.description}}</h2>
+            <h4>by {{case.authors}}{% if case.special_thanks == true or case.special_thanks is not defined %}<a class="_idFootnoteLink" href="#footnote-999">*</a>{% endif %}</h4>
+            <div class="e-tags hide-for-small-only">
+                <div class="e-left">
+                    <p>Impact</p>
+                    <p>Sector</p>
+                    <p>Location</p>
+                </div>
+                <div class="e-right">
+                    <p>
+                        {% if case.impact_type is equalto 'citizens' %}EMPOWERING CITIZENS
+                        {% elif case.impact_type is equalto 'government' %}IMPROVING GOVERNMENT
+                        {% elif case.impact_type is equalto 'economic' %}CREATING NEW ECONOMIC OPPORTUNITIES
+                        {% elif case.impact_type is equalto 'public' %}SOLVING PUBLIC PROBLEMS
+                        {% else %}{{case.impact_type | upper}}
+                        {% endif %}
+                    </p>
+                    <p>
+                        {% if case.sector is equalto 'public' %}PUBLIC SECTOR
+                        {% elif case.sector is equalto 'philantrophy' %}PHILANTROPHY &AMP; AID
+                        {% elif case.sector is equalto 'geospatial' %}GEOSPATIAL SERVICES
+                        {% elif case.sector is equalto 'politics' %}POLITICS &AMP; ELECTIONS
+                        {% elif case.sector is equalto 'health' %}HEALTH
+                        {% elif case.sector is equalto 'education' %}EDUCATION
+                        {% elif case.sector is equalto 'emergency' %}EMERGENCY SERVICES / CRISIS RESPONSE
+                        {% elif case.sector is equalto 'law' %}LAW
+                        {% elif case.sector is equalto 'business' %}BUSINESS
+                        {% elif case.sector is equalto 'transportation' %}TRANSPORTATION
+                        {% elif case.sector is equalto 'weather' %}WEATHER
+                        {% else %}{{case.impact | upper}}
+                        {% endif %}
+                    </p>
+                    <p>{{case.location | upper}}</p>
+                </div>
+            </div>
+            <div class="e-read-times hide-for-small-only">
+                <p>Read Time</p>
+                <p>Brief View <strong>{{case.read_time}} MINS</strong></p>
+                <p>Full Story <strong>{{case.full_read_time}} MINS</strong></p>
+            </div>
+        </hgroup>
+        <div id="download-button">
+            <a href="./static/files/{{case.download}}" class="b-button m-{{case.impact_type}}">Download The Report<i class="material-icons m-space">file_download</i></a>
+        </div>
+    </div>
+
+                <div class="row show-for-large">
+                    <ul class="b-sidebar">
+                        <a href="#" id="facebook"><li class="facebook"><i class="fa fa-facebook"></i></li></a><a href="#" id="linkedin"><li class="linkedin"><i class="fa fa-linkedin"></i></li></a><a href="#" id="google-plus"><li class="google-plus"><i class="fa fa-google-plus"></i></li></a><a href="#" id="twitter"><li class="twitter"><i class="fa fa-twitter"></i></li></a><a href="#" id="email" message="mailto:?subject={{ case.title | urlencode }}&body={{ case.description + '\n\nRead More:\n\n' | urlencode }}"><li class="email"><i class="fa fa-envelope"></i></li></a>
+                    </ul>
+                </div>
+
+                    {% if self.summary() %}
+                    <section class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Summary</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block summary %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    {% endif %}
+
+                    {% if self.takeaways() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Takeaways</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block takeaways %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.numbers() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Numbers</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block numbers %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.quotes() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Quotes</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block quotes %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.background() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Background</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block background %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.path_above() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Path to Impact</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block path_above %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.data() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Data</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block data %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.path() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Path to Impact</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block path %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.path_open() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Path to Open</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block path_open %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.users() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Users</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block users %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.outcome() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Outcome</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block outcome %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if self.project() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Project</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block project %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.impact() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Impact</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block impact %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if self.challenges() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Challenges</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block challenges %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+
+                    {% if self.discussion() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Discussion</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block discussion %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.action() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Calls to Action</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block action %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.forward() %}
+                    <div class="b-page-section">
+                        <div class="row">
+                            <aside class="medium-3 columns">
+                                <h3>Looking Forward</h3>
+                            </aside>
+                            <div class="large-8 columns end">
+                                <div class="e-expandable">
+                                    {% block forward %}{% endblock %}
+                                    <span class="e-read-more js-more-toggle">Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if self.full_report() %}
+                    <div class="b-page-section m-no-bottom-padding m-no-top-padding ">
+                        <div class="row">
+                            <div class="large-10 large-offset-1 columns">
+                                <p class="e-last"><a href="{% block full_report %}{% endblock %}" target="_blank"><strong>READ THE FULL REPORT</strong></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <div class="b-page-section">
+                        <div class="row">
+                            <div class="large-10 large-offset-1 columns">
+                                <p class="e-last">Learn about our <a href="about.html">methodology</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    {% if case.impact_type is equalto 'citizens' %}
+                    <div class="b-divider m-orange m-next js-next" js-impact="{{case.impact_type}}" js-sector="{{case.sector}}">
+                        {% elif case.impact_type is equalto 'government' %}
+                        <div class="b-divider m-blue m-next js-next" js-impact="{{case.impact_type}}" js-sector="{{case.sector}}">
+                            {% elif case.impact_type is equalto 'economic' %}
+                            <div class="b-divider m-yellow m-next js-next" js-impact="{{case.impact_type}}" js-sector="{{case.sector}}">
+                                {% elif case.impact_type is equalto 'public' %}
+                                <div class="b-divider m-fuschia m-next js-next" js-impact="{{case.impact_type}}" js-sector="{{case.sector}}">
+                                    {% else %}
+                                    <div class="b-divider m-next js-next" js-impact="{{case.impact_type}}" js-sector="{{case.sector}}">
+                                        {% endif %}
+                                        <div>
+                                            {% set next = false %}
+                                            {% set first = true %}
+                                            {% for casestudy in cases %}
+                                            {% if next and not casestudy.unreleased %}
+                                            {% if first %}
+                                            <h1>Read Next</h1>
+                                            {% set first = false %}
+                                            {% endif %}
+                                            <a href="case-{{casestudy.title|slug}}.html" class="impact-{{casestudy.impact_type}} sector-{{casestudy.sector}}">
+                                                <h2>{{casestudy.title}}</h2>
+                                            </a>
+                                            {% endif %}
+                                            {% if casestudy.title is equalto case.title %}
+                                            {% set next = true %}
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+
+                                    {% if self.footnotes() %}
+                                    <div class="b-footnotes">
+                                        <div class="row">
+                                            <div class="medium-8 large-offset-3 column">
+                                                <h4>Reference</h4>
+                                                {% block footnotes %}{% endblock %}
+                                                {% if case.special_thanks == true or case.special_thanks is not defined %}
+                                                <div id="footnote-999" class="_idFootnote">
+                                                    <p class="e-footnote-text">{% block special_thanks %}Special thanks to Akash Kapur who provided crucial editorial support for this case study, and to <a href="odimpact.org/about">the peer reviewers</a> who provided input on a pre-published draft.{% endblock %}</p>
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                            <div class="medium-1 column">
+                                                <div class="e-close"><i class="material-icons">close</i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </main>
+
+                                <script src="static/js/case-study-scripts.js"></script>
+
+                                {% endblock %}

@@ -1,0 +1,20 @@
+.m-center {
+    text-align: center;
+}
+
+#explore-content {
+    // min-height: 200px;
+}
+
+div {
+    &[disabled] {
+        display: none;
+    }
+    &.e-box {
+        padding: 30px;
+        margin-bottom: 15px;
+        &.m-borderless {
+            border: none;
+        }
+    }
+}

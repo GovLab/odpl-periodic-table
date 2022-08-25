@@ -1,0 +1,140 @@
+#case-study-page {
+.top-section {
+  text-align: center;
+  margin-bottom: 60px;
+  height: 65vh;
+  position: relative;
+  background: url('images/banners/sm/home.jpg') no-repeat center center;
+  background-size: cover;
+
+  &__shade {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(black, .1), rgba(black, .8));
+  }
+}
+
+.e-main-title {
+  text-transform: uppercase;
+  font-size: 60px;
+    font-weight: 100;
+}
+
+.titles {
+  // padding: 30px;
+  // padding-top: 150px;
+  padding-top: 40px;
+  position: relative;
+  z-index: 0;
+  width: 100%!important;
+  @include breakpoint($small-only) { padding-top: 100px;}
+  @include breakpoint($mobile-landscape) {
+    padding-top: 20px;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    font-weight: 100;
+    @include breakpoint($small-only) { font-size: 35px;}
+    @include breakpoint($mobile-landscape) { font-size: 28px;}
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+    @include breakpoint($small-only) { font-size: 20px;}
+    @include breakpoint($mobile-landscape) { font-size: 18px;}
+  }
+
+  h4 {
+    text-transform: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0;
+    font-weight: normal;
+    @include breakpoint($small-only) {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    @include breakpoint($mobile-landscape) { font-size: 15px;}
+  }
+
+  .collection {
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    @include breakpoint($mobile-portrait) { margin-bottom: 15px;}
+  }
+}
+
+.tags {
+  @include breakpoint($small-only) { display: none;}
+  @include breakpoint($mobile-only) { display: none;}
+  position: relative;
+  z-index: 0;
+  text-transform: uppercase;
+
+  h5 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 5px 0;
+  }
+
+  p {
+    margin: 5px 0;
+    font-weight: 500;
+  }
+
+  strong {
+    display: inline-block;
+    width: 20%;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+
+}
+
+.divider {
+  background-color: #333;
+}
+
+.floating-button {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  z-index: 11;
+  &--key-findings {
+    bottom: 0;
+  }
+
+  .button {
+    background-color: $main-color;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 600;
+    &:hover {
+      background-color: darken($main-color, 5);
+    }
+    &--citizens { @extend .m-citizens; }
+    &--government { @extend .m-government; }
+    &--economic { @extend .m-economic; }
+    &--public { @extend .m-public; }
+  }
+}

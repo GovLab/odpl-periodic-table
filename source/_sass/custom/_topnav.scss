@@ -1,0 +1,120 @@
+.top-nav {
+    &__button {
+      padding-top: 15px;
+      padding-right: 25px;
+    }
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    // height: 40px;
+    padding: 5px 5px 10px 5px;
+    // @include breakpoint($desktop) { padding: 5px 5px 10px 5px; }
+    // @include breakpoint($mobile-only) { padding: 10px 20px 20px 20px; }
+
+    &.m-fixed {
+        position: fixed;
+    }
+
+    // for text-only title
+    .e-title {
+        padding: 11px 0 0 0;
+        text-align: center;
+        display: block;
+    }
+    .e-logo {
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 5px 0 0 0;
+        text-align: center;
+        display: block;
+        img {
+          max-width: 140px;
+        }
+    }
+
+    &.m-transparent {
+        background-color: $gray-50;
+        color: $white;
+    }
+
+    .e-nav-group {
+        color: $white-70;
+        @include transition;
+        position: absolute;
+        top: 0;
+
+
+        i.material-icons {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        &.m-left .e-nav-item {
+          @include breakpoint($small-only) {
+            display: none;
+          }
+        }
+
+        &.m-right {
+          font-weight: 700;
+          right: 0;
+          @include breakpoint($small-only) {
+            // display: none;
+          }
+        }
+
+        &.e-social-media {
+          display: block;
+        }
+
+        &.e-social-media .e-nav-item {
+            padding-top: 15px;
+            font-size: 20px;
+        }
+
+        .e-nav-item {
+          display: inline-block;
+          padding: 20px;
+          &--menu {
+            padding-left: 0;
+            padding-right: 15px;
+          }
+          @include breakpoint($custom) {
+            padding-right: 10px;
+            padding-left: 10px;
+          }
+          @include breakpoint($medium-only) {
+            display: none;
+          }
+        }
+
+        .e-side-logo {
+            position: relative;
+            top: -8px;
+            img {
+                max-width: 75px;
+            }
+        }
+
+        &:hover {
+            color: $white;
+            @include transition;
+        }
+    }
+}
+
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  display: none;
+  opacity: .7;
+}
+
+.floating-button {
+  z-index: 0;
+}
