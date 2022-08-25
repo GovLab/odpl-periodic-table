@@ -14,8 +14,12 @@
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^3.0.1",
+    "gulp-install": "^1.1.0",
     "gulp-shell": "^0.5.2",
     "gulp-util": "^3.0.7",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
   }
 }
