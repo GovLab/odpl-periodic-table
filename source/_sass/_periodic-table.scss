@@ -1,8 +1,9 @@
-$red: #ba0c2d;
-$blue: #008bbf;
-$green: #00aaa2;
-$yellow: #99a03e;
-$purple: #57398d;
+$red: #550e20;
+$blue: #1b6aab;
+$green: #167069;
+$yellow: #706d16;
+$purple: #4c337c;
+
 
 #periodic-table-page {
   > header > h2 {
@@ -20,7 +21,7 @@ $purple: #57398d;
   }
   .page-section {
     padding-bottom: 20px;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -54,12 +55,15 @@ $purple: #57398d;
     text-align: center;
   }
 }
+
+
+
 .periodic-table {
   @media (max-width: 870px) {
     display: none;
   }
   padding-bottom: 20px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
 
@@ -71,7 +75,10 @@ $purple: #57398d;
   &__group--gov {
     flex: 2;
   }
-
+  &__group--odpl-cc,
+  &__group--odpl-gov {
+    flex: 3;
+  }
   .group-name {
     height: 60px;
     text-align: center;
@@ -258,7 +265,17 @@ $purple: #57398d;
     background-color: $purple;
   }
 }
-
+.periodic-table__group--odpl-cc {
+  background-color: lighten($blue, 55);
+  color: $blue;
+  .element {
+    border-color: $blue;
+  }
+  .element__container:hover,
+  .element__description {
+    background-color: $blue;
+  }
+}
 .periodic-table__group--cc {
   background-color: lighten($blue, 55);
   color: $blue;
@@ -283,7 +300,17 @@ $purple: #57398d;
     }
   }
 }
-
+.periodic-table__group--odpl-gov {
+  background-color: rgba($yellow, .1);
+  color: $yellow;
+  .element {
+    border-color: $yellow;
+  }
+  .element__container:hover,
+  .element__description {
+    background-color: $yellow;
+  }
+}
 .periodic-table__group--gov {
   background-color: rgba($yellow, .1);
   color: $yellow;
@@ -351,7 +378,7 @@ $purple: #57398d;
 }
 
 .periodic-tabs {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto 20px;
   display: flex;
   flex-direction: column;
@@ -479,6 +506,36 @@ $purple: #57398d;
       border-color: $purple;
       color: rgba($purple, .6);
       background-color: rgba($purple, .2);
+    }
+  }
+}
+
+.periodic-tab--odpl-cc {
+  background-color: $blue;
+
+  section {
+    color: $blue;
+    background-color: lighten($blue, 55);
+
+    .periodic-tab__element div {
+      border-color: $blue;
+      color: rgba($blue, .6);
+      background-color: rgba($blue, .0);
+    }
+  }
+}
+
+.periodic-tab--odpl-gov {
+  background-color: $yellow;
+
+  section {
+    color: $yellow;
+    background-color: lighten($yellow, 55);
+
+    .periodic-tab__element div {
+      border-color: $yellow;
+      color: rgba($yellow, .6);
+      background-color: rgba($yellow, .2);
     }
   }
 }

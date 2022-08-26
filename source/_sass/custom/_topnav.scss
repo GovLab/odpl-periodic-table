@@ -25,16 +25,16 @@
     .e-logo {
         max-width: 300px;
         margin: 0 auto;
-        padding: 5px 0 0 0;
+        padding: 20px 0 0 0;
         text-align: center;
         display: block;
         img {
-          max-width: 140px;
+          max-width: 200px;
         }
     }
 
     &.m-transparent {
-        background-color: $gray-50;
+        background-color: $odplblue95;
         color: $white;
     }
 

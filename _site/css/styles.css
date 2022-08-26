@@ -134,7 +134,7 @@ main .b-divider {
   padding: 60px 0; }
 
 .top-section {
-  background-color: #333;
+  background-color: #113a50;
   color: white;
   padding-top: 70px;
   padding-bottom: 30px; }
@@ -1617,7 +1617,7 @@ table.m-respond .e-line-header {
       height: 25%; } }
 #periodic-table-page .page-section {
   padding-bottom: 20px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto; }
 #periodic-table-page a {
   text-decoration: none;
@@ -1641,7 +1641,7 @@ table.m-respond .e-line-header {
 
 .periodic-table {
   padding-bottom: 20px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex; }
   @media (max-width: 870px) {
@@ -1651,6 +1651,8 @@ table.m-respond .e-line-header {
     flex: 1; }
   .periodic-table__group--cc, .periodic-table__group--gov {
     flex: 2; }
+  .periodic-table__group--odpl-cc, .periodic-table__group--odpl-gov {
+    flex: 3; }
   .periodic-table .group-name {
     height: 60px;
     text-align: center;
@@ -1787,64 +1789,82 @@ table.m-respond .e-line-header {
   height: calc(400% + 4px); }
 
 .periodic-table__group--pdd {
-  background-color: #ede9f6;
-  color: #57398d; }
+  background-color: #e0d8ef;
+  color: #4c337c; }
   .periodic-table__group--pdd .element {
-    border-color: #57398d; }
+    border-color: #4c337c; }
   .periodic-table__group--pdd .element__container:hover,
   .periodic-table__group--pdd .element__description {
-    background-color: #57398d; }
+    background-color: #4c337c; }
+
+.periodic-table__group--odpl-cc {
+  background-color: #e4f0fb;
+  color: #1b6aab; }
+  .periodic-table__group--odpl-cc .element {
+    border-color: #1b6aab; }
+  .periodic-table__group--odpl-cc .element__container:hover,
+  .periodic-table__group--odpl-cc .element__description {
+    background-color: #1b6aab; }
 
 .periodic-table__group--cc {
-  background-color: #d9f5ff;
-  color: #008bbf; }
+  background-color: #e4f0fb;
+  color: #1b6aab; }
   .periodic-table__group--cc .element {
-    border-color: #008bbf; }
+    border-color: #1b6aab; }
   .periodic-table__group--cc .element__container:hover,
   .periodic-table__group--cc .element__description {
-    background-color: #008bbf; }
+    background-color: #1b6aab; }
   .periodic-table__group--cc .periodic-table__column:nth-child(2) {
-    color: #0078a6; }
+    color: #185c95; }
     .periodic-table__group--cc .periodic-table__column:nth-child(2) .element {
       background-color: rgba(0, 0, 0, 0.05);
-      border-color: #0078a6; }
+      border-color: #185c95; }
     .periodic-table__group--cc .periodic-table__column:nth-child(2) .element__container:hover {
-      background-color: #00668c; }
+      background-color: #144f7f; }
+
+.periodic-table__group--odpl-gov {
+  background-color: rgba(112, 109, 22, 0.1);
+  color: #706d16; }
+  .periodic-table__group--odpl-gov .element {
+    border-color: #706d16; }
+  .periodic-table__group--odpl-gov .element__container:hover,
+  .periodic-table__group--odpl-gov .element__description {
+    background-color: #706d16; }
 
 .periodic-table__group--gov {
-  background-color: rgba(153, 160, 62, 0.1);
-  color: #99a03e; }
+  background-color: rgba(112, 109, 22, 0.1);
+  color: #706d16; }
   .periodic-table__group--gov .element {
-    border-color: #99a03e; }
+    border-color: #706d16; }
   .periodic-table__group--gov .element__container:hover,
   .periodic-table__group--gov .element__description {
-    background-color: #99a03e; }
+    background-color: #706d16; }
   .periodic-table__group--gov .periodic-table__column:nth-child(1) {
-    color: #878e37; }
+    color: #5b5812; }
     .periodic-table__group--gov .periodic-table__column:nth-child(1) .element {
       background-color: rgba(0, 0, 0, 0.05);
-      border-color: #878e37; }
+      border-color: #5b5812; }
     .periodic-table__group--gov .periodic-table__column:nth-child(1) .element__container:hover,
     .periodic-table__group--gov .periodic-table__column:nth-child(1) .element__description {
-      background-color: #767b30; }
+      background-color: #45440e; }
 
 .periodic-table__group--parts {
-  background-color: rgba(0, 170, 162, 0.1);
-  color: #00aaa2; }
+  background-color: rgba(22, 112, 105, 0.1);
+  color: #167069; }
   .periodic-table__group--parts .element {
-    border-color: #00aaa2; }
+    border-color: #167069; }
   .periodic-table__group--parts .element__container:hover,
   .periodic-table__group--parts .element__description {
-    background-color: #00aaa2; }
+    background-color: #167069; }
 
 .periodic-table__group--risks {
-  background-color: rgba(186, 12, 45, 0.1);
-  color: #ba0c2d; }
+  background-color: rgba(85, 14, 32, 0.1);
+  color: #550e20; }
   .periodic-table__group--risks .element {
-    border-color: #ba0c2d; }
+    border-color: #550e20; }
   .periodic-table__group--risks .element__container:hover,
   .periodic-table__group--risks .element__description {
-    background-color: #ba0c2d; }
+    background-color: #550e20; }
 
 .element__description {
   opacity: 0;
@@ -1860,7 +1880,7 @@ table.m-respond .e-line-header {
   pointer-events: all; }
 
 .periodic-tabs {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto 20px;
   display: flex;
   flex-direction: column; }
@@ -1940,63 +1960,83 @@ table.m-respond .e-line-header {
     padding: 5px 10px; }
 
 .periodic-tab--pdd {
-  background-color: #57398d;
+  background-color: #4c337c;
   color: white; }
   .periodic-tab--pdd section {
-    color: #57398d;
-    background-color: #ede9f6; }
+    color: #4c337c;
+    background-color: #e0d8ef; }
     .periodic-tab--pdd section .periodic-tab__element div {
-      border-color: #57398d;
-      color: rgba(87, 57, 141, 0.6);
-      background-color: rgba(87, 57, 141, 0.2); }
+      border-color: #4c337c;
+      color: rgba(76, 51, 124, 0.6);
+      background-color: rgba(76, 51, 124, 0.2); }
+
+.periodic-tab--odpl-cc {
+  background-color: #1b6aab; }
+  .periodic-tab--odpl-cc section {
+    color: #1b6aab;
+    background-color: #e4f0fb; }
+    .periodic-tab--odpl-cc section .periodic-tab__element div {
+      border-color: #1b6aab;
+      color: rgba(27, 106, 171, 0.6);
+      background-color: rgba(27, 106, 171, 0); }
+
+.periodic-tab--odpl-gov {
+  background-color: #706d16; }
+  .periodic-tab--odpl-gov section {
+    color: #706d16;
+    background-color: #efedaf; }
+    .periodic-tab--odpl-gov section .periodic-tab__element div {
+      border-color: #706d16;
+      color: rgba(112, 109, 22, 0.6);
+      background-color: rgba(112, 109, 22, 0.2); }
 
 .periodic-tab--cc {
-  background-color: #008bbf; }
+  background-color: #1b6aab; }
   .periodic-tab--cc section {
-    color: #008bbf;
-    background-color: #d9f5ff; }
+    color: #1b6aab;
+    background-color: #e4f0fb; }
     .periodic-tab--cc section .periodic-tab__element div {
-      border-color: #008bbf;
-      color: rgba(0, 139, 191, 0.6);
-      background-color: rgba(0, 139, 191, 0); }
+      border-color: #1b6aab;
+      color: rgba(27, 106, 171, 0.6);
+      background-color: rgba(27, 106, 171, 0); }
     .periodic-tab--cc section .periodic-tab__element div.second-subcategory {
-      border-color: #008bbf;
-      color: rgba(0, 139, 191, 0.6);
-      background-color: rgba(0, 139, 191, 0.2); }
+      border-color: #1b6aab;
+      color: rgba(27, 106, 171, 0.6);
+      background-color: rgba(27, 106, 171, 0.2); }
 
 .periodic-tab--gov {
-  background-color: #99a03e; }
+  background-color: #706d16; }
   .periodic-tab--gov section {
-    color: #99a03e;
-    background-color: #fdfdfa; }
+    color: #706d16;
+    background-color: #efedaf; }
     .periodic-tab--gov section .periodic-tab__element div {
-      border-color: #99a03e;
-      color: rgba(153, 160, 62, 0.6);
-      background-color: rgba(153, 160, 62, 0.2); }
+      border-color: #706d16;
+      color: rgba(112, 109, 22, 0.6);
+      background-color: rgba(112, 109, 22, 0.2); }
     .periodic-tab--gov section .periodic-tab__element div.second-subcategory {
-      border-color: #99a03e;
-      color: rgba(153, 160, 62, 0.6);
-      background-color: rgba(153, 160, 62, 0); }
+      border-color: #706d16;
+      color: rgba(112, 109, 22, 0.6);
+      background-color: rgba(112, 109, 22, 0); }
 
 .periodic-tab--parts {
-  background-color: #00aaa2; }
+  background-color: #167069; }
   .periodic-tab--parts section {
-    color: #00aaa2;
-    background-color: #c4fffc; }
+    color: #167069;
+    background-color: #afefea; }
     .periodic-tab--parts section .periodic-tab__element div {
-      border-color: #00aaa2;
-      color: rgba(0, 170, 162, 0.6);
-      background-color: rgba(0, 170, 162, 0.2); }
+      border-color: #167069;
+      color: rgba(22, 112, 105, 0.6);
+      background-color: rgba(22, 112, 105, 0.2); }
 
 .periodic-tab--risks {
-  background-color: #ba0c2d; }
+  background-color: #550e20; }
   .periodic-tab--risks section {
-    color: #ba0c2d;
-    background-color: #fde1e7; }
+    color: #550e20;
+    background-color: #ed8fa7; }
     .periodic-tab--risks section .periodic-tab__element div {
-      border-color: #ba0c2d;
-      color: rgba(186, 12, 45, 0.6);
-      background-color: rgba(186, 12, 45, 0.2); }
+      border-color: #550e20;
+      color: rgba(85, 14, 32, 0.6);
+      background-color: rgba(85, 14, 32, 0.2); }
 
 #contributors-page .button-container {
   text-align: center;
@@ -2042,13 +2082,13 @@ table.m-respond .e-line-header {
   .top-nav .e-logo {
     max-width: 300px;
     margin: 0 auto;
-    padding: 5px 0 0 0;
+    padding: 20px 0 0 0;
     text-align: center;
     display: block; }
     .top-nav .e-logo img {
-      max-width: 140px; }
+      max-width: 200px; }
   .top-nav.m-transparent {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(17, 58, 80, 0.95);
     color: white; }
   .top-nav .e-nav-group {
     color: rgba(255, 255, 255, 0.7);
@@ -2166,7 +2206,7 @@ table.m-respond .e-line-header {
   .page-section .expandable.m-active > *:not(.b-button) {
     display: block; }
   .page-section .expandable .b-button {
-    color: #57398d; }
+    color: #4c337c; }
   .page-section .expandable a[data-open] {
     background-color: #E8EBF2;
     text-decoration: none;
@@ -2183,7 +2223,7 @@ table.m-respond .e-line-header {
   .page-section p.e-last a {
     text-decoration: underline; }
 .page-section.m-yellow, .page-section.m-economic, .floating-button .page-section.button--economic {
-  background-color: #99a03e;
+  background-color: #706d16;
   color: white; }
 .page-section.m-fuschia, .page-section.m-public, .floating-button .page-section.button--public {
   background-color: #AD0054;
@@ -2522,7 +2562,7 @@ ul.b-sidebar {
           color: white;
           transition: all .4s ease; }
   .divider.m-yellow, .divider.m-economic, .floating-button .divider.button--economic {
-    background-color: #99a03e; }
+    background-color: #706d16; }
   .divider.m-fuschia, .divider.m-public, .floating-button .divider.button--public {
     background-color: #AD0054; }
   .divider.m-resources {
@@ -2634,9 +2674,9 @@ i.e-close {
   .grid .e-card.impact-citizens .e-card-inner {
     background-color: #ee5b43; }
   .grid .e-card.impact-government .e-card-inner {
-    background-color: #008bbf; }
+    background-color: #1b6aab; }
   .grid .e-card.impact-economic .e-card-inner {
-    background-color: #99a03e; }
+    background-color: #706d16; }
   .grid .e-card.impact-public .e-card-inner {
     background-color: #AD0054; }
   .grid .e-card.m-unreleased .e-card-inner {
@@ -2901,11 +2941,11 @@ i.e-close {
   .accordion .accordion__item.js-active dt:before {
     content: "expand_less"; }
   .accordion.m-purple {
-    background-color: #57398d; }
+    background-color: #4c337c; }
   .accordion.m-orange, .accordion.m-citizens, .floating-button .accordion.button--citizens {
     background-color: #ee5b43; }
   .accordion.m-blue, .accordion.m-government, .floating-button .accordion.button--government {
-    background-color: #008bbf; }
+    background-color: #1b6aab; }
   .accordion.m-teal {
     background-color: #008895; }
   .accordion.m-dark-blue {
@@ -3010,11 +3050,11 @@ i.e-close {
 
 /* General Styleguide customizations */
 .page-section--blue {
-  background-color: #008bbf; }
+  background-color: #1b6aab; }
 .page-section--orange {
   background-color: #ee5b43; }
 .page-section--yellow {
-  background-color: #99a03e;
+  background-color: #706d16;
   color: white; }
 .page-section--fuschia {
   background-color: #AD0054;
