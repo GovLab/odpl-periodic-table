@@ -1664,21 +1664,21 @@ table.m-respond .e-line-header {
     display: flex; }
   .periodic-table__column {
     flex: 1;
-    margin-left: -1px; }
+    padding: 5px; }
   .periodic-table__element {
     display: block;
     width: 100%;
     height: 0;
+    margin: 5px;
     padding-bottom: 100%; }
 
 .element--blank {
   opacity: 0; }
 
 .element {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   text-align: center;
-  position: relative;
-  margin-bottom: -1px; }
+  position: relative; }
   .element__container {
     position: absolute;
     top: 0;
@@ -1789,7 +1789,7 @@ table.m-respond .e-line-header {
   height: calc(400% + 4px); }
 
 .periodic-table__group--pdd {
-  background-color: #e0d8ef;
+  background-color: #f3eded;
   color: #4c337c; }
   .periodic-table__group--pdd .element {
     border-color: #4c337c; }
@@ -1798,7 +1798,7 @@ table.m-respond .e-line-header {
     background-color: #4c337c; }
 
 .periodic-table__group--odpl-cc {
-  background-color: #e4f0fb;
+  background-color: #f3eded;
   color: #1b6aab; }
   .periodic-table__group--odpl-cc .element {
     border-color: #1b6aab; }
@@ -1823,7 +1823,7 @@ table.m-respond .e-line-header {
       background-color: #144f7f; }
 
 .periodic-table__group--odpl-gov {
-  background-color: rgba(112, 109, 22, 0.1);
+  background-color: #f3eded;
   color: #706d16; }
   .periodic-table__group--odpl-gov .element {
     border-color: #706d16; }
@@ -1832,7 +1832,7 @@ table.m-respond .e-line-header {
     background-color: #706d16; }
 
 .periodic-table__group--gov {
-  background-color: rgba(112, 109, 22, 0.1);
+  background-color: #f3eded;
   color: #706d16; }
   .periodic-table__group--gov .element {
     border-color: #706d16; }
@@ -1849,7 +1849,7 @@ table.m-respond .e-line-header {
       background-color: #45440e; }
 
 .periodic-table__group--parts {
-  background-color: rgba(22, 112, 105, 0.1);
+  background-color: #f3eded;
   color: #167069; }
   .periodic-table__group--parts .element {
     border-color: #167069; }
@@ -1858,8 +1858,9 @@ table.m-respond .e-line-header {
     background-color: #167069; }
 
 .periodic-table__group--risks {
-  background-color: rgba(85, 14, 32, 0.1);
-  color: #550e20; }
+  background-color: #f3eded;
+  color: #550e20;
+  padding-right: 5px; }
   .periodic-table__group--risks .element {
     border-color: #550e20; }
   .periodic-table__group--risks .element__container:hover,
