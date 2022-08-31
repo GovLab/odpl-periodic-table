@@ -1867,6 +1867,28 @@ table.m-respond .e-line-header {
   .periodic-table__group--risks .element__description {
     background-color: #550e20; }
 
+.box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center; }
+
+.download-box {
+  border: 2px #164A7A solid;
+  background-color: rgba(22, 74, 122, 0.1);
+  padding: 30px;
+  margin: 2rem 8rem;
+  text-align: center; }
+  @media (max-width: 39.9375em) {
+    .download-box {
+      margin: 2rem 1rem; } }
+  .download-box .button--dark-blue {
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 0.8rem; }
+
 .element__description {
   opacity: 0;
   pointer-events: none; }

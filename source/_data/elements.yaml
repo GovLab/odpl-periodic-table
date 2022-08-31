@@ -31,7 +31,7 @@
       - blank: true
       - blank: true
       - symbol: Ci
-        name: "Culture and Institutional Buy-in"
+        name: "Culture and Institutional <br> Buy-in"
         description: "By gaining approval from the leaders of their organization and fellow associates, open data advocates can gather the resources needed to unlock institutional resources and overcome roadblocks."
       - symbol: Di
         name: Data Infrastructure
@@ -97,7 +97,7 @@
       - blank: true
       - blank: true
       - blank: true
-      - symbol: P
+      - symbol: Pr
         name: Principles
         description: Principles help data practitioners and those they collaborate with to align toward the same goals. They can be useful for determining the type of data collaboration, as well as the practices and processes used.
       - symbol: Pa
@@ -135,7 +135,7 @@
         height: 3
         name: Data Stewards 
         description: Data stewards are responsible data leaders empowered to seek new ways to create public value through cross-sector data collaboration. They can be useful for proactively collaborating, protecting customers, and acting on opportunities.
-      - symbol: De
+      - symbol: Do
         height: 3
         name: Domain Experts
         description: Domain experts are individuals with knowledge of a particular domain or sector whose knowledge can be used to better identify opportunities to (re)use data for the public benefit or otherwise identify, design, analyze, and communicate insights about open data.
