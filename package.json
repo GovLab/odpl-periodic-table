@@ -21,5 +21,8 @@
   },
   "dependencies": {
     "natives": "^1.1.6"
+  },
+  "resolutions": {
+    "gift": "^0.10.2"
   }
 }
