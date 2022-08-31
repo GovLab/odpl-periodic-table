@@ -1884,10 +1884,11 @@ table.m-respond .e-line-header {
   @media (max-width: 39.9375em) {
     .download-box {
       margin: 2rem 1rem; } }
-  .download-box .button--dark-blue {
-    color: #ffffff;
-    padding: 5px 10px;
-    font-size: 0.8rem; }
+
+.download-box .button--dark-blue {
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 0.8rem; }
 
 .element__description {
   opacity: 0;

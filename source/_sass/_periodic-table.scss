@@ -386,11 +386,11 @@ background-color: rgb(243,237,237);
   @include breakpoint($small-only) {
     margin: 2rem 1rem;
   }
-  .button--dark-blue{
-    color: #ffffff;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-  }
+}
+.download-box .button--dark-blue{
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 0.8rem;
 }
 .element__description {
   opacity: 0;
