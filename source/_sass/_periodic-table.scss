@@ -369,7 +369,7 @@ background-color: rgb(243,237,237);
     background-color: $red;
   }
 }
-.box-text{
+.box-text {
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -377,7 +377,7 @@ background-color: rgb(243,237,237);
   align-items: center;
   text-align: center;
 }
-.download-box{
+.download-box {
   border: 2px #164A7A solid;
   background-color: rgba(22, 74, 122, 0.1);
   padding: 30px;
@@ -387,7 +387,7 @@ background-color: rgb(243,237,237);
     margin: 2rem 1rem;
   }
 }
-.download-box .button--dark-blue{
+.download-box .button--dark-blue {
   color: #ffffff;
   padding: 5px 10px;
   font-size: 0.8rem;
